@@ -14,9 +14,8 @@
   <meta name="msvalidate.01" content="76654036E37BDF9AC689FE5E3A2A0B2E" />
   <meta name="p:domain_verify" content="d542ce4790f579a2b116b8b771964850"/>
 
-  <!-- TODO - [citat|Dette er mit citat - Det er langt men godt|Kim Kristensen,| Udvikler i Nordjyske Medier] -->
 
-  <title>Citat | Nordjyske Design System</title>
+  <title>Knapper | Nordjyske Design System</title>
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-touch-icon-72x72.png">
@@ -41,10 +40,6 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="nds.css">
-  <link rel="stylesheet" href="quote.css">
-
-<!--  <link rel="stylesheet/less" type="text/css" href="quote.less">
-  <script src="less.js" type="text/javascript"></script> -->
 
 <!--[if lte IE 8]> <link rel="stylesheet" href="stylesheets/ie8.css"> <![endif]-->
 <!-- IE Fix for HTML5 Tags -->
@@ -161,7 +156,6 @@ piCId = '52395';
     </ul>
     <h3 class="nds-headline nds-headline-tertiary margin-bottom-x-small">Komponenter</h3>
       <li id="story-teaser" class="nds-nav--side__list__item"><a href="story-teaser.html">Story Teasers</a></li>
-      <li id="citat" class="nds-nav--side__list__item"><a href="quote.html">Citat</a></li>
       <!--
             <li id="utilities" class="nds-nav--side__list__item"><a href="/brand/design-system/utilities">Utilities</a></li>
           </ul>
@@ -206,29 +200,12 @@ piCId = '52395';
       <section class="nds-section nds-section--white nds-section--shrink">
         <div class="row">
           <div class="medium-10 columns">
-            <h1 class="nds-headline nds-headline-primary">Citat</h1>
-            <h2 class="nds-headline nds-headline-secondary">Citater anvendes til at fremhæve et udsagn fra artiklen. Citatet kan indeholde navnet på personer der citeres fra samt en beskrivelse af hvem personen er (profession eller rolle relateret til artikelindholdet).</h2>          </div>
-            <div class="margin-top-small">
-              <div class="medium-10 columns">
-
-            <hr>
-            <p><strong>Afprøv dit citat</strong> </p><input type="text" id="citat-field" placeholder="Skriv dit citat her" onkeyup="previewCitat()">
-
-            <div class="margin-top-small">
-            <p><strong>Afprøv afsender</strong> </p><input type="text" id="citat-afsender" placeholder="Skriv navnet på den citerede her... ex. Mona Nielsen" onkeyup="previewCitatAfsender()">
-
-            <div class="margin-top-small">
-            <p><strong>Afprøv afsender titel</strong> </p><input type="text" id="citat-afsender-titel" placeholder="Skriv titlen på afsenderen, ex. Fabriksarbejder i Thy" onkeyup="previewCitatAfsenderTitel()">
+            <h1 class="nds-headline nds-headline-primary">Knapper</h1>
+            <h2 class="nds-headline nds-headline-secondary">Knapper er afrundede og rektangulære og anvendes når brugere skal eller kan foretage en handling. Knapperne er designet i flere forskellige størrelser og farver der er oplistet herunder. Brugervenligheden på tværs af platforme er afgørende, så lav aldrig knapper med et interaktionsområde der er mindre end angivet her.</h2>          </div>
         </div>
-        <a class="nds-button nds-button--darkgray" onclick="createQuoteShortcodeToClipboard()">Kopier Shortcode til udklipsholder</a>
-        <div class="margin-bottom-medium"></div>
-        <!-- <input class="clipboard__input" id="@font-serif" value="@font-serif"><a class="clipboard__icon" data-clipboard-target="#font-primary"><i class="fa fa-files-o" aria-hidden="true"></i></a> -->
-      </div>
-    </div>
-
         <div class="row">
           <div class="medium-12 columns">
-
+            <hr>
           </div>
         </div>
         <div class="row">
@@ -236,78 +213,171 @@ piCId = '52395';
 
 <table class="margin-bottom-medium nds-table-documentation nds-documentation-sections-table">
   <tr>
-    <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Mobil - 320px</h3></td>
+    <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Typer</h3></td>
+    <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Code</h3></td>
   </tr>
   <tr>
-
-    <td class="nds-grayBackground" style="padding: 0; padding-top: 16px; padding-bottom: 16px">
-      <div style="width:320px; position:relative; display: block; height: auto;">
-      <div class="nds-quote">
-          <div class="nds-quote-sign"><img src="assets/Citat.svg" alt="Citat" height="27px" width="24px"></div>
-          <div class="nds-quote-container">
-                  <div class="nds-blockquote">
-                      Der er ingen vej udenom. Hvis man i stedet kører ad Limfjordsbroen, bryder trafikken sammen dér, og der er ikke andre alternativer
-                  </div>
-                  <span class="nds-quoteBy">Kristian Reinau,<span class="nds-quoteByTitle"> Invisteringsøkonom hos Nordnet</span></span>
-                </div>
-      </div>
-  <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
-</div>
+    <td>
+      <p class="margin-bottom-none">Primær</p>
     </td>
-
   </tr>
   <tr>
     <td>
       <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
-      <tr>
-        <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Desktop - 567px</h3></td>
-      </tr>
-      <tr>
+      <p>
+                    <i class="material-icons">chat_bubble</i>
+                    <span class="comments-count"></span>
+                    <span class="comments-title">Kommentarer</span>
+                    <span class="comments-collapse-icon">
+                        <i class="material-icons">keyboard_arrow_down</i>
+                        <i class="material-icons hidden">keyboard_arrow_up</i>
+                    </span>
+                  </p>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--green"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="margin-bottom-none">Dark Gray</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="nds-button nds-button--darkgray">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--darkgray"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="margin-bottom-none">Gray</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="nds-button nds-button--gray">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--gray"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="margin-bottom-none">White w/ Green Text</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #7BC143;">
+      <a class="nds-button nds-button--white-green">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--white-green"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="margin-bottom-none">White w/ Gray Text</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #455560;">
+      <a class="nds-button nds-button--white-gray">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--white-gray"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="margin-bottom-none">Ghost White</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #7BC143;">
+      <a class="nds-button nds-button--ghost-white">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--ghost-white"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="margin-bottom-none">Ghost Dark Gray</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="nds-button nds-button--ghost-darkgray">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--ghost-darkgray"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+</table>
 
-        <td class="nds-grayBackground" style="padding: 0; padding-top: 16px; padding-bottom: 16px">
-          <div style="width:567px; position:relative; display: block; height: auto;">
-          <div class="nds-quote">
-              <div class="nds-quote-sign"><img src="assets/Citat.svg" alt="Citat" height="27px" width="24px"></div>
-              <div class="nds-quote-container">
-                      <div class="nds-blockquote">
-                          Der er ingen vej udenom. Hvis man i stedet kører ad Limfjordsbroen, bryder trafikken sammen dér, og der er ikke andre alternativer
-                      </div>
-                      <span class="nds-quoteBy">Kristian Reinau,<span class="nds-quoteByTitle"> Invisteringsøkonom hos Nordnet</span></span>
-                    </div>
-          </div>
-      <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
-      </div>
-        </td>
+<table class="margin-bottom-medium nds-table-documentation nds-documentation-sections-table">
+  <tr>
+    <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Sizes</h3></td>
+    <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Code</h3></td>
+  </tr>
+  <tr>
+    <td>
+      <p class="margin-bottom-none">Small</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="nds-button nds-button--green nds-button--small">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--small"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="margin-bottom-none">Large</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="nds-button nds-button--green nds-button--large">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--large"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="margin-bottom-none">Full Width</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class="nds-button nds-button--green nds-button--full">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--full"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
+</table>
 
-      </tr>
-      <tr>
-        <td>
-          <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
 
-          <tr>
-            <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Desktop Plus - 624px</h3></td>
-          </tr>
-          <tr>
-
-            <td class="nds-grayBackground" style="padding: 0; padding-top: 16px; padding-bottom: 16px">
-              <div style="width:624px; position:relative; display: block; height: auto;">
-              <div class="nds-quote">
-                  <div class="nds-quote-sign"><img src="assets/Citat.svg" alt="Citat" height="27px" width="24px"></div>
-                  <div class="nds-quote-container">
-                          <div class="nds-blockquote">
-                              Der er ingen vej udenom. Hvis man i stedet kører ad Limfjordsbroen, bryder trafikken sammen dér, og der er ikke andre alternativer
-                          </div>
-                          <span class="nds-quoteBy">Kristian Reinau,<span class="nds-quoteByTitle"> Invisteringsøkonom hos Nordnet</span></span>
-                        </div>
-              </div>
-          <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
-          </div>
-            </td>
-
-          </tr>
-          <tr>
-            <td>
-              <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
+<table class="margin-bottom-medium nds-table-documentation nds-documentation-sections-table">
+  <tr>
+    <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Capitalize</h3></td>
+    <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Code</h3></td>
+  </tr>
+  <tr>
+    <td>
+      <a class="nds-button nds-button--green nds-button--capitalize">Try It Free</a>
+    </td>
+    <td>
+      <pre class="prettyprint margin-none">&lt;a class="nds-button nds-button--capitalize"&gt;Try It Free&lt;/a&gt;</pre>
+    </td>
+  </tr>
 </table>
 
           </div>
@@ -360,104 +430,5 @@ twq('init','nuvoe');
 twq('track','PageView');
 </script>
 <!-- End Twitter universal website tag code -->
-
-<script type="text/javascript">
-
-function isEmpty(str){
-    return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
-}
-
-function createQuoteShortcodeToClipboard() {
-  var quote = document.getElementById("citat-field").value;
-  var quoteBy = document.getElementById("citat-afsender").value;
-  var quoteByTitle = document.getElementById("citat-afsender-titel").value;
-
-  var result = "[citat|" + quote + "|" + quoteBy + ", |" + quoteByTitle + "]";
-
-  // Create a dummy input to copy the string array inside it
-  var dummy = document.createElement("input");
-
-  // Add it to the document
-  document.body.appendChild(dummy);
-
-  // Set its ID
-  dummy.setAttribute("id", "dummy_id");
-
-  // Output the array into it
-  document.getElementById("dummy_id").value=result;
-
-  // Select it
-  dummy.select();
-
-  // Copy its contents
-  document.execCommand("copy");
-
-  alert("Shortkode kopieret til udklipsholder: " + result);
-
-  // Remove it as its not needed anymore
-  document.body.removeChild(dummy);
-
-
-}
-
-function previewCitat() {
-    var x = document.getElementById("citat-field").value;
-    var headlines = document.getElementsByClassName("nds-blockquote");
-    console.log("Headline should be: " + x);
-    var i;
-    for (i = 0; i < headlines.length; i++) {
-        headlines[i].innerHTML = x;
-      }
-}
-
-function previewCitatAfsender() {
-    var x = document.getElementById("citat-afsender").value;
-    var headlines = document.getElementsByClassName("nds-quoteBy");
-
-    var htmlString = "";
-    if (isEmpty(document.getElementById("citat-afsender-titel").value)) {
-      htmlString = '<span class="nds-quoteBy">' + x + '</span>';
-    }
-    else {
-      console.log("Citat afsender har en titel");
-      htmlString = '<span class="nds-quoteBy">' + x + ', '+ '<span class="nds-quoteByTitle">' + document.getElementById("citat-afsender-titel").value + '</span></span>'
-    }
-
-
-    var i;
-    for (i = 0; i < headlines.length; i++) {
-        headlines[i].outerHTML = htmlString;
-      }
-}
-
-function previewCitatAfsenderTitel() {
-    var x = document.getElementById("citat-afsender-titel").value;
-    var headlines = document.getElementsByClassName("nds-quoteByTitle");
-    var htmlString = x;
-    if (document.getElementsByClassName("nds-quoteByTitle").length != 0) {
-      console.log("The class is there!");
-      htmlString = document.getElementById("citat-afsender-titel").value;
-
-      var i;
-      for (i = 0; i < headlines.length; i++) {
-          headlines[i].innerHTML = htmlString;
-        }
-    }
-    else {
-      console.log("The class is missing!");
-      htmlString = '<span class="nds-quoteBy">' + document.getElementById("citat-afsender").value + ', '+ '<span class="nds-quoteByTitle">' + document.getElementById("citat-afsender-titel").value + '</span></span>'
-      var headlines = document.getElementsByClassName("nds-quoteBy");
-      var i;
-      for (i = 0; i < headlines.length; i++) {
-          headlines[i].outerHTML = htmlString;
-        }
-    }
-}
-
-
-
-
-</script>
-
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e8c29c0eae","applicationID":"51410798","transactionName":"NlUDZhADDBFUBRVfCw8fNEALTQsMUQMZGBQJQA==","queueTime":0,"applicationTime":7,"atts":"GhIAEFgZHx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
