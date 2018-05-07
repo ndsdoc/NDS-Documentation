@@ -1,0 +1,77 @@
+/*Quote.less*/
+/*NDS-Variables v.0.2 - 03.05.18*/
+/*Fonts*/
+/*36px*/
+/*28px*/
+/*22.4px*/
+/*20px*/
+/*18.4px*/
+/*16.96px*/
+/*16px*/
+/*12.8px*/
+/*10.4px*/
+/*20px*/
+/*Padding & Spacing - Horizontal */
+/*4px*/
+/*8px*/
+/*16px*/
+/*24px*/
+/*32px*/
+/*64px*/
+/*Padding & Spacing - Vertical*/
+/*4px*/
+/*8px*/
+/*16px*/
+/*24px*/
+/*32px*/
+/*64px*/
+/*Colors*/
+/*Other variables*/
+/*Quote */
+.nds-quote {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-style: normal;
+  position: relative;
+  background-color: white;
+}
+.nds-quote-sign {
+  position: absolute;
+  top: 0.25em;
+  padding-top: 2em;
+}
+.nds-quote-sign img {
+  height: 27px;
+  width: 24px;
+}
+.nds-quote-container {
+  background-color: white;
+  padding-left: 2rem;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.nds-blockquote {
+  display: block;
+  font-size: 1.25rem;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 1.45em;
+  color: #1a1a1a;
+}
+.nds-quoteBy {
+  font-size: 0.8rem;
+  color: #474747;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding-top: 0.5em;
+  display: inline-block;
+}
+.nds-quoteBy .nds-quoteByTitle {
+  color: #474747;
+  font-weight: 400;
+  text-transform: none;
+}
+
+/*# sourceMappingURL=quote.css.map */
