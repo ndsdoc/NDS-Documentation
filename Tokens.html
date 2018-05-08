@@ -67,29 +67,7 @@ piCId = '52395';
   else { window.addEventListener('load', async_load, false); }
 })();
 </script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  // Creates an adblock detection plugin.
-  ga('provide', 'adblockTracker', function(tracker, opts) {
-    var ad = document.createElement('ins');
-    ad.className = 'AdSense';
-    ad.style.display = 'block';
-    ad.style.position = 'absolute';
-    ad.style.top = '-1px';
-    ad.style.height = '1px';
-    document.body.appendChild(ad);
-    tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
-    document.body.removeChild(ad);
-  });
-
-  ga('create', 'UA-15307491-1', 'auto');
-  ga('require', 'adblockTracker', {dimensionIndex: 7});
-  ga('send', 'pageview');
-</script>
 
 </head>
 <body>
@@ -298,6 +276,11 @@ piCId = '52395';
         <td>1.75em</td>
         <td>28px</td>
       </tr>
+      <tr>
+        <td><input class="clipboard__input" id="font-size-xxx-large" value="@font-size-xxx-large" style="font-size: 2.25em"><a class="clipboard__icon" data-clipboard-target="#font-size-xxx-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>2.25em</td>
+        <td>36px</td>
+      </tr>
     </table>
 
     <h2 class="nds-headline nds-headline-secondary margin-bottom-small">Line Height</h2>
@@ -320,6 +303,22 @@ piCId = '52395';
       </tr>
     </table>
 
+    <h2 class="nds-headline nds-headline-secondary margin-bottom-small">Letter Spacing</h2>
+    <table class="margin-bottom-medium nds-table-documentation">
+      <tr>
+        <td><input class="clipboard__input" id="font-letter-spacing-s" value="@font-letter-spacing-s"><a class="clipboard__icon" data-clipboard-target="#font-letter-spacing-s"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>0.02em</td>
+      </tr>
+      <tr>
+        <td><input class="clipboard__input" id="font-letter-spacing-base" value="@font-letter-spacing-base"><a class="clipboard__icon" data-clipboard-target="#font-letter-spacing-base"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>0.04em</td>
+      </tr>
+      <tr>
+        <td><input class="clipboard__input" id="font-letter-spacing-l" value="@font-letter-spacing-l"><a class="clipboard__icon" data-clipboard-target="#font-letter-spacing-l"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>0.06em</td>
+      </tr>
+    </table>
+
   <!--  <h2 class="nds-headline nds-headline-secondary margin-bottom-medium">Borders</h2>
     <table class="margin-bottom-medium nds-table-documentation">
       <tr>
@@ -336,55 +335,76 @@ piCId = '52395';
       </tr>
     </table>-->
 
-    <h2 class="nds-headline nds-headline-secondary margin-bottom-small">Spacing</h2>
+    <h2 class="nds-headline nds-headline-secondary margin-bottom-small">Spacing Horizontal</h2>
     <table class="margin-bottom-medium nds-table-documentation nds-table-documentation--three-columns">
       <tr>
-        <td><input class="clipboard__input" id="space-x-small" value="@space-x-small"><a class="clipboard__icon" data-clipboard-target="#space-x-small"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td><input class="clipboard__input" id="space-horizontal-x-small" value="@space-horizontal-x-small"><a class="clipboard__icon" data-clipboard-target="#space-horizontal-x-small"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>0.25rem</td>
+        <td>4px</td>
+      </tr>
+      <tr>
+        <td><input class="clipboard__input" id="space-horizontal-small" value="@space-horizontal-small"><a class="clipboard__icon" data-clipboard-target="#space-horizontal-small"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>0.5rem</td>
+        <td>8px</td>
+      </tr>
+      <tr>
+        <td><input class="clipboard__input" id="space-horizontal-medium" value="@space-horizontal-medium"><a class="clipboard__icon" data-clipboard-target="#space-horizontal-medium"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>1rem</td>
+        <td>16px</td>
+      </tr>
+      <tr>
+        <td><input class="clipboard__input" id="space-horizontal-large" value="@space-horizontal-large"><a class="clipboard__icon" data-clipboard-target="#space-horizontal-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>1.5rem</td>
+        <td>24px</td>
+      </tr>
+      <tr>
+        <td><input class="clipboard__input" id="space-horizontal-x-large" value="@space-horizontal-x-large"><a class="clipboard__icon" data-clipboard-target="#space-horizontal-x-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>2rem</td>
+        <td>32px</td>
+      </tr>
+      <tr>
+        <td><input class="clipboard__input" id="space-horizontal-xx-large" value="@space-horizontal-xx-large"><a class="clipboard__icon" data-clipboard-target="#space-horizontal-xx-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td>3rem</td>
+        <td>64px</td>
+      </tr>
+    </table>
+
+    <h2 class="nds-headline nds-headline-secondary margin-bottom-small">Spacing Vertical</h2>
+    <table class="margin-bottom-medium nds-table-documentation nds-table-documentation--three-columns">
+      <tr>
+        <td><input class="clipboard__input" id="space-vertical-x-small" value="@space-vertical-x-small"><a class="clipboard__icon" data-clipboard-target="#space-vertical-x-small"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
         <td>0.25em</td>
         <td>4px</td>
       </tr>
       <tr>
-        <td><input class="clipboard__input" id="space-small" value="@space-small"><a class="clipboard__icon" data-clipboard-target="#space-small"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td><input class="clipboard__input" id="space-vertical-small" value="@space-vertical-small"><a class="clipboard__icon" data-clipboard-target="#space-vertical-small"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
         <td>0.5em</td>
         <td>8px</td>
       </tr>
       <tr>
-        <td><input class="clipboard__input" id="space-medium" value="@space-medium"><a class="clipboard__icon" data-clipboard-target="#space-medium"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td><input class="clipboard__input" id="space-vertical-medium" value="@space-vertical-medium"><a class="clipboard__icon" data-clipboard-target="#space-vertical-medium"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
         <td>1em</td>
         <td>16px</td>
       </tr>
       <tr>
-        <td><input class="clipboard__input" id="space-large" value="@space-large"><a class="clipboard__icon" data-clipboard-target="#space-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td><input class="clipboard__input" id="space-vertical-large" value="@space-vertical-large"><a class="clipboard__icon" data-clipboard-target="#space-vertical-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
         <td>1.5em</td>
         <td>24px</td>
       </tr>
       <tr>
-        <td><input class="clipboard__input" id="space-x-large" value="@space-x-large"><a class="clipboard__icon" data-clipboard-target="#space-x-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td><input class="clipboard__input" id="space-vertical-x-large" value="@space-vertical-x-large"><a class="clipboard__icon" data-clipboard-target="#space-vertical-x-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
         <td>2em</td>
         <td>32px</td>
       </tr>
       <tr>
-        <td><input class="clipboard__input" id="space-xx-large" value="@space-xx-large"><a class="clipboard__icon" data-clipboard-target="#space-xx-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
+        <td><input class="clipboard__input" id="space-vertical-xx-large" value="@space-vertical-xx-large"><a class="clipboard__icon" data-clipboard-target="#space-vertical-xx-large"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
         <td>3em</td>
         <td>64px</td>
       </tr>
     </table>
 
-    <h2 class="nds-headline nds-headline-secondary margin-bottom-small">Letter Spacing</h2>
-    <table class="margin-bottom-medium nds-table-documentation">
-      <tr>
-        <td><input class="clipboard__input" id="font-letter-spacing-s" value="@font-letter-spacing-s"><a class="clipboard__icon" data-clipboard-target="#font-letter-spacing-s"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
-        <td>0.02em</td>
-      </tr>
-      <tr>
-        <td><input class="clipboard__input" id="font-letter-spacing-base" value="@font-letter-spacing-base"><a class="clipboard__icon" data-clipboard-target="#font-letter-spacing-base"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
-        <td>0.04em</td>
-      </tr>
-      <tr>
-        <td><input class="clipboard__input" id="font-letter-spacing-l" value="@font-letter-spacing-l"><a class="clipboard__icon" data-clipboard-target="#font-letter-spacing-l"><i class="fa fa-files-o" aria-hidden="true"></i></a></td>
-        <td>0.06em</td>
-      </tr>
-    </table>
+
+
 
           </div>
         </div>
@@ -423,6 +443,7 @@ piCId = '52395';
   document.getElementById("font-size-large").style.fontSize = "1.25em";
   document.getElementById("font-size-x-large").style.fontSize = "1.4em";
   document.getElementById("font-size-xx-large").style.fontSize = "1.75em";
+  document.getElementById("font-size-xxx-large").style.fontSize = "2.25em";
 
 
 
