@@ -38,8 +38,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Roboto:400,500,700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="nds.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../nds.css">
 
 <!--[if lte IE 8]> <link rel="stylesheet" href="stylesheets/ie8.css"> <![endif]-->
 <!-- IE Fix for HTML5 Tags -->
@@ -117,7 +117,7 @@ piCId = '52395';
   <div class="expanded row">
     <div class="large-2 columns nds-documentation__nav" id="nds-documentation__nav">
       <div class="nds-documentation__logo">
-<a href=""><img src="assets/brand.svg" width="120px" height="auto"></a>
+<a href=""><img src="../assets/brand.svg" width="120px" height="auto"></a>
 </div>
 <a class="nds-documentation__toggle" id="nds-documentation__open"><i class="fa fa-bars" aria-hidden="true"></i></a>
 <a class="nds-documentation__toggle" id="nds-documentation__close" style="display:none;"><i class="fa fa-times" aria-hidden="true"></i></a>
@@ -180,9 +180,38 @@ piCId = '52395';
         <div class="row">
           <div class="medium-10 columns">
             <h1 class="nds-headline nds-headline-primary">Story Teaser</h1>
-            <h2 class="nds-headline nds-headline-secondary">En Story Teaser er en appetitvækker til en artikel. De optræder både på forsiden og i bunden af artikler. Der findes mange forskellige typer af Story Teasers alt efter indholdstypen og placeringen af Story Teaseren (som ex. platfom eller hvor på siden den vises).</h2>
+            <h2 class="nds-headline nds-headline-secondary">En Story Teaser er en appetitvækker til en artikel. De optræder både på forsiden og i bunden af artikler. Der findes mange forskellige typer af Story Teasers alt efter indholdstypen og placeringen af Story Teaseren (som ex. platfom eller hvor på siden den vises).<br><br><strong>Test rubriktekst og billedcrop</strong> på alle typer af Story Teasers inden publicering. En artikel vil potentielt kunne blive vist i en hvilken som helst Story Teaser type, på hvilken som helst platform.</h2>
             <div class="margin-top-small">
 
+            <p><strong>TIP</strong> - Vidste du, at lange ord kan ombrydes med en skjult <strong>-</strong> der kun vises hvis nødvendigt?<br>Skriv <strong>&amp;shy;</strong> mellem bogstaverne i det ord der skal ombrydes hvis nødvendigt (ex. Økonomi<strong>&amp;shy;</strong>styring).</p>
+            <div class="margin-top-small">
+            <hr>
+            <p><strong>Afprøv din rubriktekst</strong> </p><input type="text" id="teaserTextField" placeholder="Skriv din rubriktekst her..." onkeyup="previewTeaser()">
+            <p><span class="teaserHeadlineCount">Din rubriktekst er: </span><strong><span class="teaserHeadlineLabel"></span></strong></p>
+
+            <div class="margin-top-small">
+            <p><strong>Afprøv din underrubriktekst</strong> </p><input type="text" id="teaserSubTextField" placeholder="Skriv din underrubriktekst her..." onkeyup="previewSubTeaser()">
+            <p><span class="teaserSubHeadlineCount">Din underrubriktekst er: </span><strong><span class="subheading"></span></strong></p>
+
+            <div class="margin-top-small">
+            <p><strong>Afprøv dit billede</strong> </p><input type="text" id="teaserImageTextField" placeholder="Skriv din billede URL her... ex. https://imageservice.nordjyske.dk/images/nordjyske.story/2018_04_27/abc51b2c-751c-44e5-b432-73a07a8e2c82.jpg" onkeyup="previewImageTeaser()">
+            <p><span><strong>NB</strong> - Billed crops virker kun ved billeder der er hosted på servere hos Nordjyske Medier.</span></p>
+            <hr>
+            <strong><i class="material-icons md-36">stay_current_portrait</i> Mobil Website</strong> - Sådan ser teasers ud hvis du besøger Nordjyske.dk på din smartphone.
+              <br><br>
+              <strong><i class="material-icons md-36">desktop_mac</i> Desktop Website</strong> - Sådan ser teasers ud hvis du besøger Nordjyske.dk på din pc eller mac.
+              <br><br>
+              <strong><i class="material-icons md-36">apps</i> Mobil App</strong> - Sådan ser teasers ud hvis du besøger henter Nordjyske appen på App Store.
+              <hr>
+              <strong>Aktiver/Deaktiver PLUS branding på alle teasers</strong>
+              <span><div class="plus-logo-inline"><img class="njy-img" src="../assets/plus_rect.svg" alt="Nordjyske PLUS" height="32" style="padding-top:8px;"></div>
+                <label class="switch"><input type="checkbox" onclick="plusToggle(this);" checked="true"> <span class="slider round"></span>
+            </label>
+          </span>
+
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="medium-12 columns">
             <hr>
@@ -202,7 +231,7 @@ piCId = '52395';
 <div class="col-xs-12 ">
 <a href="#" class="story-teaser" data-story-id="665a02d3-c30c-4903-84bf-97bda37507a7">
     <img src="https://imageservice.nordjyske.dk/images/nordjyske.story/2018_04_27/abc51b2c-751c-44e5-b432-73a07a8e2c82.jpg?w=624&amp;h=415&amp;mode=crop&amp;scale=both" alt="Fjerritslev-brande: Brandmand skal syv år i fængsel" class="njy-img img-responsive teaser-image">
-    <div class="premium-content-logo"><img class="njy-img" src="assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
+    <div class="premium-content-logo"><img class="njy-img" src="../assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
 <div class="text-wrapper">
     <div class="teaser-tag">Anden verdenskrig</div>
     <h2 class="teaserHeadlineLabel">Lokal opfinder har fundet nazi-skatten i Asaa</h2>
@@ -214,7 +243,7 @@ piCId = '52395';
       </div>
     </div>
 
-    <p class="margin-bottom-medium"><p><strong>Code</strong></p>
+  <!--  <p class="margin-bottom-medium"><p><strong>Code</strong></p> -->
     <pre class="prettyprint margin-none margin-bottom-medium">
     &lt;div class="col-xs-12"&gt;
       &lt;a href="https://nordjyske.dk/nyheder/fjerritslev-brande-brandmand-skal-syv-aar-i-faengsel/665a02d3-c30c-4903-84bf-97bda37507a7" class="story-teaser" data-story-id="665a02d3-c30c-4903-84bf-97bda37507a7"&gt;
@@ -236,7 +265,7 @@ piCId = '52395';
     <a href="#" class="story-teaser-small" data-story-id="c2af3378-f16a-426b-b77b-87d03de56529">
             <div class="story-teaser-small-img">
                 <img class="njy-img teaser-image" src="https://imageservice.nordjyske.dk/images/nordjyske.story/2018_04_27/abc51b2c-751c-44e5-b432-73a07a8e2c82.jpg?w=128&amp;h=128&amp;mode=crop&amp;scale=both&amp;quality=75" alt="Farvel til flygtningebyen: 146 barakker fjernes" width="128">
-                <div class="premium-content-logo plus-adjust-padding"><img class="njy-img" src="assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
+                <div class="premium-content-logo plus-adjust-padding"><img class="njy-img" src="../assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
             </div>
             <div class="text-wrapper">
                 <div class="teaser-tag">Anden verdenskrig</div>
@@ -262,7 +291,7 @@ piCId = '52395';
       <div class="col-xs-12 ">
     <a href="#" class="story-teaser plus plus-teaser-w-image" data-story-id="97e10ecc-c15a-41e1-96ee-18a522ed97fb">
             <img class="njy-img teaser-image" src="https://imageservice.nordjyske.dk/images/nordjyske.story/2018_04_27/abc51b2c-751c-44e5-b432-73a07a8e2c82.jpg?w=624&amp;h=415&amp;mode=crop&amp;scale=both" alt="Lokal opfinder har fundet nazi-skatten i Asaa" width="624">
-            <div class="premium-content-logo"><img class="njy-img" src="assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
+            <div class="premium-content-logo"><img class="njy-img" src="../assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
         <div class="text-wrapper">
             <div class="teaser-tag">Anden verdenskrig</div>
             <h2 class="teaserHeadlineLabel">Lokal opfinder har fundet nazi-skatten i Asaa</h2>
@@ -288,7 +317,7 @@ piCId = '52395';
       <div class="col-xs-12 no-pad-sides">
         <a href="https://nordjyske.dk/plus/lasse-har-hjertesvigt-jeg-er-ikke-laengere-bange-for-at-falde-doed-om/2b458632-01fc-4d83-a284-02128ba3440e" class="story-teaser plus plus-teaser-w-image-l" data-story-id="2b458632-01fc-4d83-a284-02128ba3440e">
             <img class="njy-img teaser-image" src="https://imageservice.nordjyske.dk/images/nordjyske.story/2018_04_27/abc51b2c-751c-44e5-b432-73a07a8e2c82.jpg?w=624&amp;h=836&amp;mode=crop&amp;scale=both" alt="Lasse har hjertesvigt: Jeg er ikke længere bange for at falde død om" width="624">
-            <div class="premium-content-logo"><img class="njy-img" src="assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
+            <div class="premium-content-logo"><img class="njy-img" src="../assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
             <div class="icon-wrapper hidden-print">
                 <div class="icon-wrapper-image hidden-print"></div>
             </div>
@@ -318,7 +347,7 @@ piCId = '52395';
       <div class="col-xs-8">
         <a href="#" class="story-teaser" data-story-id="92c41289-224e-4bd0-9c6d-10e620c4e2c2">
             <img src="https://imageservice.nordjyske.dk/images/nordjyske.story/2018_04_27/abc51b2c-751c-44e5-b432-73a07a8e2c82.jpg?w=624&amp;h=415&amp;mode=crop&amp;scale=both" alt="Politiker trækker sig efter drab på ulv" class="njy-img img-responsive teaser-image">
-            <div class="premium-content-logo"><img class="njy-img" src="assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
+            <div class="premium-content-logo"><img class="njy-img" src="../assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
         <div class="text-wrapper">
             <div class="teaser-tag">Anden verdenskrig</div>
             <h2 class="teaserHeadlineLabel">Lokal opfinder har fundet nazi-skatten i Asaa</h2>
@@ -343,7 +372,7 @@ piCId = '52395';
       <div class="col-xs-6">
     <a href="https://nordjyske.dk/nyheder/kommuner-goer-op-med-omtalt-fratraedelsesordning/6f74f547-b8e4-454f-be89-413d23f127e9" class="story-teaser" data-story-id="6f74f547-b8e4-454f-be89-413d23f127e9">
             <img src="https://imageservice.nordjyske.dk/images/nordjyske.story/2018_04_27/abc51b2c-751c-44e5-b432-73a07a8e2c82.jpg?w=464&amp;h=309&amp;mode=crop&amp;scale=both&amp;quality=75" alt="Kommuner gør op med omtalt fratrædelsesordning" class="njy-img img-responsive teaser-image">
-            <div class="premium-content-logo"><img class="njy-img" src="assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
+            <div class="premium-content-logo"><img class="njy-img" src="../assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
         <div class="text-wrapper">
             <div class="teaser-tag">Anden verdenskrig</div>
             <h2 class="teaserHeadlineLabel">Lokal opfinder har fundet nazi-skatten i Asaa</h2>
@@ -369,7 +398,7 @@ piCId = '52395';
       <div class="col-xs-4">
        <a class="allclick story-teaser" id="cXLinkIdjgml2n8rcwqhvn4z" href="#" target="_top" title="Magnussen: Hele bilens side var revet op">
         <img width="304" class="njy-img img-responsive teaser-image" src="https://imageservice.nordjyske.dk/images/nordjyske.story/2018_04_27/abc51b2c-751c-44e5-b432-73a07a8e2c82.jpg?w=304&amp;h=203&amp;mode=crop&amp;scale=both" alt="Magnussen: Hele bilens side var revet op">
-        <div class="premium-content-logo"><img class="njy-img" src="assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
+        <div class="premium-content-logo"><img class="njy-img" src="../assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
         <div class="text-wrapper">
             <div class="teaser-tag">Anden verdenskrig</div>
             <h2 class="teaserHeadlineLabel">Lokal opfinder har fundet nazi-skatten i Asaa</h2>
@@ -396,7 +425,7 @@ piCId = '52395';
     <a href="#" class="story-teaser-small" data-story-id="1e4e94d1-7f60-47f2-ab94-86ff0a3f1b3f">
             <div class="story-teaser-small-img">
                 <img class="njy-img teaser-image" src="https://imageservice.nordjyske.dk/images/nordjyske.story/2018_04_27/abc51b2c-751c-44e5-b432-73a07a8e2c82.jpg?w=128&amp;h=128&amp;mode=crop&amp;scale=both&amp;quality=75" alt="Bondo øjner positiv bevægelse i Forligsinstitutionen" width="128">
-                <div class="premium-content-logo plus-adjust-padding plus-adjust-theme-left-padding"><img class="njy-img" src="assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
+                <div class="premium-content-logo plus-adjust-padding plus-adjust-theme-left-padding"><img class="njy-img" src="../assets/plus_rect.svg" alt="Nordjyske PLUS" height="32"></div>
             </div>
             <div class="text-wrapper">
                 <div class="teaser-tag">Anden verdenskrig</div>
