@@ -255,7 +255,7 @@ piCId = '52395';
       
           
           <!-- VIDEO EMBED -->
-          <div class="nds-youtube-embed"></div><iframe class="nds-youtube-iframe" width="100%" height="auto" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe></div>
+          <div class="nds-youtube-embed"></div><iframe class="nds-youtube-embed-iframe" width="100%" height="auto" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe></div>
           
   <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
 </div>
@@ -274,7 +274,7 @@ piCId = '52395';
           <div style="width:567px; position:relative; display: block; height: auto;">
           
               <!-- VIDEO EMBED -->
-                <div class="nds-youtube-embed"></div><iframe class="nds-youtube-iframe" width="100%" height="auto" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe></div>
+                <div class="nds-youtube-embed"></div><iframe class="nds-youtube-embed-iframe" width="100%" height="auto" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe></div>
               
       <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
       </div>
@@ -294,7 +294,7 @@ piCId = '52395';
               <div style="width:624px; position:relative; display: block; height: auto;">
              
                   <!-- VIDEO EMBED -->
-                    <div class="nds-youtube-embed"></div><iframe class="nds-youtube-iframe" width="100%" height="auto" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe></div>
+                    <div class="nds-youtube-embed"></div><iframe class="nds-youtube-embed-iframe" width="100%" height="auto" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe></div>
                   
           <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
           </div>
@@ -376,7 +376,7 @@ function previewCitat() {
     var x = document.getElementById("citat-field").value;
     var youTube = returnVideoLinkFromURL(x);
     
-    var headlines = document.getElementsByClassName("nds-youtube-iframe");
+    var headlines = document.getElementsByClassName("nds-youtube-embed-iframe");
     console.log("Headline should be: " + youTube);
     var i;
     for (i = 0; i < headlines.length; i++) {
@@ -391,7 +391,7 @@ function returnVideoLinkFromURL(url) {
     console.log("ID should be: " + extractId);
     var youtube = "https://www.youtube.com/embed/" + extractId.replace(/[^\w\s!?]/g,'');
     console.log("Extracte should be: " + youtube);
-    return youtubeResult;
+    return youtube;
 }
 
 
