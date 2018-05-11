@@ -1,0 +1,23 @@
+{
+	"files": {
+		"embeds.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../../../embeds.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"nds-variables.less"
+			]
+		}
+	}
+}

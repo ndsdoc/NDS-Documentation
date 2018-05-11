@@ -39,7 +39,7 @@
 
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../nds.css">
-  <link rel="stylesheet" href="../quote.css">
+  <link rel="stylesheet" href="../css/embeds.css">
 
 <!--  <link rel="stylesheet/less" type="text/css" href="quote.less">
   <script src="less.js" type="text/javascript"></script> -->
@@ -255,7 +255,7 @@ piCId = '52395';
       
           
           <!-- VIDEO EMBED -->
-          <iframe class="video-preview" width="100%" height="290px" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe>
+          <div class="nds-youtube-embed"></div><iframe class="nds-youtube-iframe" width="100%" height="auto" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe></div>
           
   <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
 </div>
@@ -274,7 +274,7 @@ piCId = '52395';
           <div style="width:567px; position:relative; display: block; height: auto;">
           
               <!-- VIDEO EMBED -->
-               <iframe class="video-preview" width="100%" height="319px" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe>
+                <div class="nds-youtube-embed"></div><iframe class="nds-youtube-iframe" width="100%" height="auto" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe></div>
               
       <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
       </div>
@@ -294,7 +294,7 @@ piCId = '52395';
               <div style="width:624px; position:relative; display: block; height: auto;">
              
                   <!-- VIDEO EMBED -->
-                   <iframe class="video-preview" width="100%" height="351px" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe>
+                    <div class="nds-youtube-embed"></div><iframe class="nds-youtube-iframe" width="100%" height="auto" src="https://www.youtube.com/embed/KrZDwnBCNe0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="true"></iframe></div>
                   
           <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
           </div>
@@ -343,7 +343,8 @@ function isEmpty(str){
 function createQuoteShortcodeToClipboard() {
   var url = document.getElementById("citat-field").value;
   var youTube = returnVideoLinkFromURL(url);
-
+    
+        
   var result = "[youtube|" + youTube + "]";
 
   // Create a dummy input to copy the string array inside it
@@ -369,29 +370,28 @@ function createQuoteShortcodeToClipboard() {
   // Remove it as its not needed anymore
   document.body.removeChild(dummy);
 
-
 }
 
 function previewCitat() {
     var x = document.getElementById("citat-field").value;
-   /* var extractId = x.split("/").pop();
-    console.log("Extracte should be: " + extractId);
-    var youtube = "https://www.youtube.com/embed/" + extractId.replace(/[^\w\s!?]/g,'');*/
     var youTube = returnVideoLinkFromURL(x);
-    var headlines = document.getElementsByClassName("video-preview");
-    console.log("Headline should be: " + youtube);
+    
+    var headlines = document.getElementsByClassName("nds-youtube-iframe");
+    console.log("Headline should be: " + youTube);
     var i;
     for (i = 0; i < headlines.length; i++) {
-        headlines[i].src = youtube;
+        headlines[i].src = youTube;
       }
 }
     
 
 function returnVideoLinkFromURL(url) {
     var extractId = url.split("/").pop();
-    console.log("Extracte should be: " + extractId);
+    extractId = extractId.split("=").pop();
+    console.log("ID should be: " + extractId);
     var youtube = "https://www.youtube.com/embed/" + extractId.replace(/[^\w\s!?]/g,'');
-    return youtube;
+    console.log("Extracte should be: " + youtube);
+    return youtubeResult;
 }
 
 
