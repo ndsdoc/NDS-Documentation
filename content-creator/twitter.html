@@ -7,14 +7,17 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  
+
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="google-site-verification" content="LY76Rt9llf5YEp387CVTeDlzVk4jOzJcSXpZaJLzEAU" />
   <meta name="msvalidate.01" content="76654036E37BDF9AC689FE5E3A2A0B2E" />
   <meta name="p:domain_verify" content="d542ce4790f579a2b116b8b771964850"/>
 
-  <title>Soundcloud | Nordjyske Design System</title>
+<!-- Custom Twitter themeing -->
+
+
+  <title>Twitter | Nordjyske Design System</title>
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-touch-icon-72x72.png">
@@ -40,7 +43,7 @@
   <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../nds.css">
   <link rel="stylesheet" href="../css/embeds.css">
-    
+
 
 <!--  <link rel="stylesheet/less" type="text/css" href="quote.less">
   <script src="less.js" type="text/javascript"></script> -->
@@ -172,7 +175,7 @@ piCId = '52395';
       <li id="citat" class="nds-nav--side__list__item"><a href="#">Discovery Video</a></li>
            <li id="citat" class="nds-nav--side__list__item"><a href="#">SoundCloud</a></li>
            </ul>
-      
+
        <h3 class="nds-headline nds-headline-tertiary margin-bottom-x-small">Interaktive embeds</h3>
        <ul class="nds-nav--side__list">
       <li id="citat" class="nds-nav--side__list__item"><a href="#">Egne Interaktive embeds</a></li>
@@ -222,14 +225,15 @@ piCId = '52395';
       <section class="nds-section nds-section--white nds-section--shrink">
         <div class="row">
           <div class="medium-10 columns">
-            <h1 class="nds-headline nds-headline-primary">Soundcloud</h1>
-            <h2 class="nds-headline nds-headline-secondary">Embed en Soundcloud afspiller i din artikel ved at bruge en shortcode. Brug dette værktøj til at generere en shortcode du kan indsætte i InCopy</h2>          </div>
+            <h1 class="nds-headline nds-headline-primary">Twitter</h1>
+            <h2 class="nds-headline nds-headline-secondary">Embed et Tweet i din artikel ved at bruge en shortcode. Brug dette værktøj til at generere en shortcode du kan indsætte i InCopy</h2>          </div>
             <div class="margin-top-small">
               <div class="medium-10 columns">
 
             <hr>
-            <p><strong>Link til Soundcloud video eller Video ID</strong> </p><input type="text" id="citat-field" placeholder="Ex. https://soundcloud.com/user-879144461-439549066/flammer-over-fjerritslev" onkeyup="previewCitat()">
+            <p><strong>Link til Tweet</strong> </p><input type="text" id="citat-field" placeholder="Ex. https://twitter.com/Interior/status/20">
 
+        <a class="nds-button margin-right-small nds-button--green" onclick="previewEmbed()">Preview Tweet</a>
         <a class="nds-button nds-button--darkgray" onclick="createQuoteShortcodeToClipboard()">Kopier Shortcode til udklipsholder</a>
         <div class="margin-bottom-medium"></div>
         <!-- <input class="clipboard__input" id="@font-serif" value="@font-serif"><a class="clipboard__icon" data-clipboard-target="#font-primary"><i class="fa fa-files-o" aria-hidden="true"></i></a> -->
@@ -243,7 +247,7 @@ piCId = '52395';
         </div>
         <div class="row">
           <div class="medium-12 columns">
-              
+
 
 <table class="margin-bottom-medium nds-table-documentation nds-documentation-sections-table">
   <tr>
@@ -252,13 +256,13 @@ piCId = '52395';
   <tr>
 
     <td class="nds-grayBackground" style="padding: 0; padding-top: 16px; padding-bottom: 16px">
-      <div style="width:320px; position:relative; display: block; height: auto;">
-      
-          
-          <!-- VIDEO EMBED -->
-        <iframe class="nds-soundcloud-embed" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/345507801&color=%23fc4b2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> 
-          
-          
+      <div style="width:320px; position:relative; display: block; height: auto; overflow: hidden">
+
+
+        
+            <div id="oembedMobile"></div>
+
+
   <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
 </div>
     </td>
@@ -273,12 +277,13 @@ piCId = '52395';
       <tr>
 
         <td class="nds-grayBackground" style="padding: 0; padding-top: 16px; padding-bottom: 16px">
-          <div style="width:567px; position:relative; display: block; height: auto;">
-          
+          <div style="width:567px; position:relative; display: block; height: auto; overflow: hidden">
+
               <!-- VIDEO EMBED -->
-              <iframe class="nds-soundcloud-embed" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-879144461-439549066/sofie-trolde-det-spiller-vi-for&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> 
-              
-              
+              <div id="oembedDesktop"></div>
+
+
+
       <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
       </div>
         </td>
@@ -294,11 +299,12 @@ piCId = '52395';
           <tr>
 
             <td class="nds-grayBackground" style="padding: 0; padding-top: 16px; padding-bottom: 16px">
-              <div style="width:624px; position:relative; display: block; height: auto;">
-             
+              <div style="width:624px; position:relative; display: block; height: auto; overflow: hidden">
+
                   <!-- VIDEO EMBED -->
-                  <iframe class="nds-soundcloud-embed" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/345507801&color=%23fc4b2e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                  
+                  <div id="oembedDesktopPlus"></div>
+
+
           <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
           </div>
             </td>
@@ -320,10 +326,6 @@ piCId = '52395';
 <script src="/js/clipboard.min.js"></script>
 <script src="/js/nds-docs.js"></script>
 
-<script>
-  setActiveState('buttons');
-  var clipboard = new Clipboard('.clipboard__icon');
-</script>
 
 <script async src="https://use.fontawesome.com/3e2d91e305.js"></script>
 <script defer src="/js/app.min.js?v=04.21.18"></script>
@@ -336,19 +338,44 @@ piCId = '52395';
 </div>
 </noscript>
 
+<script>
+    window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f); 
+  };
+  return t;
+}(document, "script", "twitter-wjs"));
+    
+    
+</script>
+          
+          
 <script type="text/javascript">
-
-function isEmpty(str){
-    return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
-}
+    
+    var mobileSize = 320;
+    var desktopSize = 567;
+    var desktopPlusSize = 624;
+    
+    
+   
 
 function createQuoteShortcodeToClipboard() {
+
   var url = document.getElementById("citat-field").value;
-  var videolink = returnVideoLinkFromURL(url);
     
-        
-  var result = "[soundcloud|" + videolink + "]";
+  var extractId = url.split("/").pop();
+  console.log("Extracte should be: " + extractId);
+
+  var result = "[twitter|" + extractId + "]";
 
   // Create a dummy input to copy the string array inside it
   var dummy = document.createElement("input");
@@ -373,19 +400,129 @@ function createQuoteShortcodeToClipboard() {
   // Remove it as its not needed anymore
   document.body.removeChild(dummy);
 
+  
+}
+    
+function previewEmbed(tweetNumber) {
+    /* VIMEO 
+  
+   // This is the URL of the video you want to load
+  var contentUrl = 'http://www.vimeo.com/7100569';
+
+  // This is the oEmbed endpoint for Vimeo (we're using JSON)
+  // (Vimeo also supports oEmbed discovery. See the PHP example.)
+  var endpoint = 'http://www.vimeo.com/api/oembed.json';
+  
+  */
+    
+    document.getElementById("oembedMobile").innerHTML = "";
+    document.getElementById("oembedDesktop").innerHTML = "";
+    document.getElementById("oembedDesktopPlus").innerHTML = "";
+    
+    console.log("Tweet number: " + tweetNumber);
+  
+    var contentUrl = document.getElementById("citat-field").value;
+    
+    var extractId = contentUrl.split("/").pop();
+    
+    
+    if (tweetNumber != undefined) {
+        extractId = tweetNumber;
+    }
+    
+    console.log("Extracte should be: " + extractId);
+    
+   // var endpoint = 'https://publish.twitter.com/oembed';
+    
+    twttr.widgets.createTweet(
+          extractId,
+          document.getElementById('oembedMobile'),
+          {
+            theme: 'light',
+            width: mobileSize,
+            lang: 'da',
+            dnt: 'true',
+            linkColor: "#C23D26"
+          }
+        );
+  
+     twttr.widgets.createTweet(
+          extractId,
+          document.getElementById('oembedDesktop'),
+          {
+            theme: 'light',
+            width: desktopSize,
+            lang: 'da',
+            dnt: 'true',
+            linkColor: "#C23D26"
+          }
+        );
+    
+    twttr.widgets.createTweet(
+          extractId,
+          document.getElementById('oembedDesktopPlus'),
+          {
+            theme: 'light',
+            width: desktopPlusSize,
+            lang: 'da',
+            dnt: 'true',
+            linkColor: "#C23D26"
+          }
+        );
+  
+    
+    /*
+    //Mobile URL
+     var url = 'https://cors-anywhere.herokuapp.com/' + endpoint + '?url=' + encodeURIComponent(contentUrl) + '&width=' + mobileSize;
+    console.log("Url to fetch is: " + url)
+    var client = new HttpClient();
+    client.get(url, function(response) {
+    var jsonResponse = JSON.parse(response);
+   // document.getElementById("oembedMobile").innerHTML = jsonResponse.html;
+        
+        
+        
+    });
+    
+    
+    //Desktop URL
+     var desktopUrl = 'https://cors-anywhere.herokuapp.com/' + endpoint + '?url=' + encodeURIComponent(contentUrl) + '&width=' + desktopSize;
+    console.log("desktopUrl to fetch is: " + url)
+    var client2 = new HttpClient();
+    client2.get(desktopUrl, function(response) {
+    var jsonResponse = JSON.parse(response);
+    document.getElementById("oembedDesktop").innerHTML = jsonResponse.html;
+        
+        
+        
+    });
+    
+    //Desktop Plus URL
+     var desktopPlusUrl = 'https://cors-anywhere.herokuapp.com/' + endpoint + '?url=' + encodeURIComponent(contentUrl) + '&width=' + desktopPlusSize;
+    console.log("desktopPlusUrl to fetch is: " + url)
+    var client3 = new HttpClient();
+    client3.get(desktopPlusUrl, function(response) {
+    var jsonResponse = JSON.parse(response);
+    console.log(jsonResponse);
+    document.getElementById("oembedDesktopPlus").innerHTML = jsonResponse.html;
+    });
+    */
+    
 }
 
-function previewCitat() {
-    var x = document.getElementById("citat-field").value;
-    var video = returnVideoLinkFromURL(x);
-    
-    var headlines = document.getElementsByClassName("nds-soundcloud-embed");
-    console.log("Headline should be: " + video);
-    var i;
-    for (i = 0; i < headlines.length; i++) {
-        headlines[i].src = video;
+var HttpClient = function() {
+    this.get = function(aUrl, aCallback) {
+        var anHttpRequest = new XMLHttpRequest();
+        anHttpRequest.onreadystatechange = function() { 
+            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                aCallback(anHttpRequest.response);
+        }
+
+        anHttpRequest.open( "GET", aUrl, true );            
+        anHttpRequest.send( null );
     }
 }
+
     
 
 function returnVideoLinkFromURL(url) {
@@ -393,8 +530,13 @@ function returnVideoLinkFromURL(url) {
     return videolink;
 }
 
-
+    twttr.ready(function (t) {  
+    previewEmbed("20");                         
+    });
+    
 </script>
 
+
+          
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e8c29c0eae","applicationID":"51410798","transactionName":"NlUDZhADDBFUBRVfCw8fNEALTQsMUQMZGBQJQA==","queueTime":0,"applicationTime":7,"atts":"GhIAEFgZHx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
