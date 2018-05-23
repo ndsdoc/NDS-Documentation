@@ -1,0 +1,138 @@
+/*Fact-box.less*/
+/*NDS-Variables v.0.2 - 03.05.18*/
+/*Fonts*/
+/*36px*/
+/*28px*/
+/*22.4px*/
+/*20px*/
+/*18.4px*/
+/*16.96px*/
+/*16px*/
+/*14.4px*/
+/*12.8px*/
+/*20px*/
+/*Padding & Spacing - Horizontal */
+/*4px*/
+/*8px*/
+/*16px*/
+/*24px*/
+/*32px*/
+/*64px*/
+/*Padding & Spacing - Vertical*/
+/*4px*/
+/*8px*/
+/*16px*/
+/*24px*/
+/*32px*/
+/*64px*/
+/*Colors*/
+/*Other variables*/
+.factbox {
+  background-color: #f2f2f2;
+  margin-bottom: 1.5em;
+  padding: 0 2em 1.5em;
+  border-top: 4px solid #C23D26;
+}
+.factbox.mobile {
+  padding: 0 1em 1.5em;
+}
+.factbox .factbox-content > h3 {
+  font-size: 0.9em;
+  line-height: 1.25em;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  background-color: #C23D26;
+  color: #ffffff;
+  float: left;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase !important;
+  display: inline-block;
+  white-space: pre-wrap;
+  max-width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.factbox .factbox-content .factbox-body {
+  position: relative;
+  display: inline-block;
+  margin-top: 1em;
+  min-width: 100%;
+}
+.factbox .factbox-content .factbox-body .factbox-text {
+  font-size: 1em;
+  line-height: 1.45em;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  white-space: pre-wrap;
+}
+.factbox .factbox-content .factbox-body .factbox-text > img {
+  max-width: 100%;
+}
+.factbox .factbox-content .factbox-body .factbox-text > ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
+.factbox .factbox-content .factbox-body.collapse[aria-expanded="false"] {
+  height: 3.75em !important;
+  overflow: hidden;
+}
+.factbox .factbox-content .factbox-body.collapsing[aria-expanded="false"] {
+  height: 3.75em !important;
+}
+.factbox .factbox-content .factbox-body:before {
+  -webkit-transition: all 0.8s ease-out;
+  -moz-transition: all 0.8s ease-out;
+  -ms-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0), #f2f2f2);
+  background: -o-linear-gradient(rgba(255, 255, 255, 0), #f2f2f2);
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0), #f2f2f2);
+  background: linear-gradient(rgba(255, 255, 255, 0), #f2f2f2);
+}
+.factbox .factbox-content .factbox-body.in:before {
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+.factbox .factbox-content .factbox-body.in + a .more-icon,
+.factbox .factbox-content .factbox-body.in + a .more-text {
+  display: none;
+}
+.factbox .factbox-content .factbox-body:not(.in) + a .less-icon,
+.factbox .factbox-content .factbox-body:not(.in) + a .less-text {
+  display: none;
+}
+.factbox .factbox-content .toggle-btn {
+  color: #C23D26;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.25em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 0.5em 0;
+  display: inline-block;
+}
+.factbox .factbox-content .toggle-btn:hover {
+  text-decoration: none;
+}
+.factbox .factbox-content .toggle-btn:focus {
+  text-decoration: none;
+}
+.factbox .factbox-content .toggle-btn .more-icon,
+.factbox .factbox-content .toggle-btn .less-icon {
+  color: #C23D26;
+  font-size: 1.25em;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+/*# sourceMappingURL=fact-box.css.map */

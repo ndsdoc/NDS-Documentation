@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="google-site-verification" content="LY76Rt9llf5YEp387CVTeDlzVk4jOzJcSXpZaJLzEAU" />
+  <meta name="msvalidate.01" content="76654036E37BDF9AC689FE5E3A2A0B2E" />
+  <meta name="p:domain_verify" content="d542ce4790f579a2b116b8b771964850"/>
+
+  <title>Faktaboks | Nordjyske Design System</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicon/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/favicon.json">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <script defer src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Roboto:400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js">
+    <link rel="stylesheet" href="../js/summernote-da-DK.js">
+    <script src="../js/summernote-da-DK.js">    
+    </script>
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../nds.css">
+  <link rel="stylesheet" href="../css/components/fact-box.css">
+
+<!--  <link rel="stylesheet/less" type="text/css" href="quote.less">
+  <script src="less.js" type="text/javascript"></script> -->
+
+<!--[if lte IE 8]> <link rel="stylesheet" href="stylesheets/ie8.css"> <![endif]-->
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]> <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+<!--<script>
+   WebFontConfig = {
+    google: {
+      families: ['Roboto:300,400,500,600', 'Source Sans Pro:400,400italic,500,600,700']
+    }
+  };
+   (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+      wf.async = true;
+      s.parentNode.insertBefore(wf, s);
+   })(document);
+</script> -->
+<script type="text/javascript">
+piAId = '39532';
+piCId = '52395';
+
+(function() {
+  function async_load(){
+    var s = document.createElement('script'); s.type = 'text/javascript';
+    s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+    var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+  }
+  if(window.attachEvent) { window.attachEvent('onload', async_load); }
+  else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  // Creates an adblock detection plugin.
+  ga('provide', 'adblockTracker', function(tracker, opts) {
+    var ad = document.createElement('ins');
+    ad.className = 'AdSense';
+    ad.style.display = 'block';
+    ad.style.position = 'absolute';
+    ad.style.top = '-1px';
+    ad.style.height = '1px';
+    document.body.appendChild(ad);
+    tracker.set('dimension' + opts.dimensionIndex, !ad.clientHeight);
+    document.body.removeChild(ad);
+  });
+
+  ga('create', 'UA-15307491-1', 'auto');
+  ga('require', 'adblockTracker', {dimensionIndex: 7});
+  ga('send', 'pageview');
+</script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+  function getCookie(key) {
+    var browserCookie = "; " + document.cookie,
+      cookieSplit     = browserCookie.split("; " + key + "=");
+
+    if (cookieSplit.length === 2) {
+      return cookieSplit.pop().split(";").shift();
+    }
+
+    return null;
+  }
+  // Set to the user's ID, username, or email address, or '' if not yet known.
+  var _user_id = '';
+  // Set to a unique session ID for the visitor's current browsing session.
+  var _session_id = getCookie('fsBrowserSessionId');
+
+  var _sift = window._sift = window._sift || [];
+  _sift.push(['_setAccount', 'ac728209d5']);
+  _sift.push(['_setUserId', _user_id]);
+  _sift.push(['_setSessionId', _session_id]);
+  _sift.push(['_trackPageview']);
+
+ (function() {
+   function ls() {
+     var e = document.createElement('script');
+     e.src = 'https://cdn.siftscience.com/s.js';
+     document.body.appendChild(e);
+   }
+   if (window.attachEvent) {
+     window.attachEvent('onload', ls);
+   } else {
+     window.addEventListener('load', ls, false);
+   }
+ })();
+</script>
+<main class="nds-documentation nds-documentation--content-section">
+  <div class="expanded row">
+    <div class="large-2 columns nds-documentation__nav" id="nds-documentation__nav">
+      <div class="nds-documentation__logo">
+<a href=""><img src="../assets/brand.svg" width="120px" height="auto"></a>
+</div>
+<a class="nds-documentation__toggle" id="nds-documentation__open"><i class="fa fa-bars" aria-hidden="true"></i></a>
+<a class="nds-documentation__toggle" id="nds-documentation__close" style="display:none;"><i class="fa fa-times" aria-hidden="true"></i></a>
+<h1 class="nds-documentation__title nds-headline nds-headline-secondary">Content guidelines</h1>
+<div class="nds-nav--drawer" id="nds-nav--drawer">
+  <div class="nds-nav--side nds-nav--side--simple">
+    <ul class="nds-nav--side__list">
+      <li id="design-system" class="nds-nav--side__list__item"><a href="oversigt.html">Oversigt</a></li>
+    </ul>
+    <h3 class="nds-headline nds-headline-tertiary margin-bottom-x-small">Styling</h3>
+    <ul class="nds-nav--side__list">
+      <li id="colors" class="nds-nav--side__list__item"><a href="colors.html">Farver</a></li>
+      <li id="tokens" class="nds-nav--side__list__item"><a href="tokens.html">Skrifttyper</a></li>
+    </ul>
+    <h3 class="nds-headline nds-headline-tertiary margin-bottom-x-small">Shortcode generator</h3>
+      <li id="story-teaser" class="nds-nav--side__list__item"><a href="../story-teaser.html">Story Teasers</a></li>
+      <li id="citat" class="nds-nav--side__list__item"><a href="quote.html">Citat</a></li>
+      <!--
+            <li id="utilities" class="nds-nav--side__list__item"><a href="/brand/design-system/utilities">Utilities</a></li>
+          </ul>
+          <h3 class="nds-headline nds-headline-tertiary margin-bottom-x-small">Components</h3>
+          <ul class="nds-nav--side__list">
+            <li id="accordion" class="nds-nav--side__list__item"><a href="/brand/design-system/accordion">Accordion</a></li>
+            <li id="action-box" class="nds-nav--side__list__item"><a href="/brand/design-system/action-box">Action Box</a></li>
+            <li id="badge" class="nds-nav--side__list__item"><a href="/brand/design-system/badge">Badge</a></li>
+            <li id="breadcrumbs" class="nds-nav--side__list__item"><a href="/brand/design-system/breadcrumbs">Breadcrumbs</a></li>
+            <li id="buttons" class="nds-nav--side__list__item"><a href="/brand/design-system/buttons">Buttons</a></li>
+            <li id="callout-box" class="nds-nav--side__list__item"><a href="/brand/design-system/callout-box">Callout Box</a></li>
+            <li id="card" class="nds-nav--side__list__item"><a href="/brand/design-system/card">Card</a></li>
+            <li id="content-box" class="nds-nav--side__list__item"><a href="/brand/design-system/content-box">Content Box</a></li>
+            <li id="headlines" class="nds-nav--side__list__item"><a href="/brand/design-system/headlines">Headlines</a></li>
+            <li id="heroes" class="nds-nav--side__list__item"><a href="/brand/design-system/heroes">Heroes</a></li>
+            <li id="horizontal-rule" class="nds-nav--side__list__item"><a href="/brand/design-system/horizontal-rule">Horizontal Rule</a></li>
+            <li id="hover-box" class="nds-nav--side__list__item"><a href="/brand/design-system/hover-box">Hover Box</a></li>
+            <li id="icons" class="nds-nav--side__list__item"><a href="/brand/design-system/icons">Icons</a></li>
+            <li id="image-wrap" class="nds-nav--side__list__item"><a href="/brand/design-system/image-wrap">Image Wrap</a></li>
+            <li id="label" class="nds-nav--side__list__item"><a href="/brand/design-system/label">Label</a></li>
+            <li id="list" class="nds-nav--side__list__item"><a href="/brand/design-system/list">List</a></li>
+            <li id="member" class="nds-nav--side__list__item"><a href="/brand/design-system/member">Member</a></li>
+            <li id="modal" class="nds-nav--side__list__item"><a href="/brand/design-system/modal">Modal</a></li>
+            <li id="nav" class="nds-nav--side__list__item"><a href="/brand/design-system/nav">Nav</a></li>
+            <li id="notification" class="nds-nav--side__list__item"><a href="/brand/design-system/notification">Notification</a></li>
+            <li id="screenshots" class="nds-nav--side__list__item"><a href="/brand/design-system/screenshots">Screenshots</a></li>
+            <li id="sections" class="nds-nav--side__list__item"><a href="/brand/design-system/sections">Sections</a></li>
+            <li id="share" class="nds-nav--side__list__item"><a href="/brand/design-system/share">Share</a></li>
+            <li id="standfirst" class="nds-nav--side__list__item"><a href="/brand/design-system/standfirst">Standfirst</a></li>
+            <li id="table" class="nds-nav--side__list__item"><a href="/brand/design-system/table">Table</a></li>
+            <li id="template-preview" class="nds-nav--side__list__item"><a href="/brand/design-system/template-preview">Template Preview</a></li>
+            <li id="testimonial" class="nds-nav--side__list__item"><a href="/brand/design-system/testimonial">Testimonial</a></li>
+            <li id="toggle-content" class="nds-nav--side__list__item"><a href="/brand/design-system/toggle-content">Toggle Content</a></li>
+            <li id="toggle-resources" class="nds-nav--side__list__item"><a href="/brand/design-system/toggle-resources">Toggle Resources</a></li>
+            <li id="tooltip" class="nds-nav--side__list__item"><a href="/brand/design-system/tooltip">Tooltip</a></li>
+      -->
+    </ul>
+  </div>
+</div>
+    </div>
+    <div class="large-10 columns">
+      <section class="nds-section nds-section--white nds-section--shrink">
+        <div class="row">
+          <div class="medium-10 columns">
+            <h1 class="nds-headline nds-headline-primary">Faktaboks</h1>
+            <h2 class="nds-headline nds-headline-secondary">En faktaboks anvendes til at indlejre indhold i en artikel der giver en merforklaring, definition eller oprids af historien. En faktaboks er som standard sammenfoldes og skal foldes ud for at vise indholdet.<br/>Feltet overskrift erstatter ordet FAKTA med en tekst i versaler. Brug kun en overskrift der beskriver hvad læseren kan forvente ved at folde faktaboksen ud.<br/><br/>Når du er færdig med di faktaboks kan du trykke kopier og derefter indsætte indholdet som brødtekst i en faktaboks i NewsCycle. Husk at skrive din overskrift manuelt i NewsCycle.</h2>          </div>
+            <div class="margin-top-small">
+              <div class="medium-10 columns">
+
+            <hr>
+            <p><strong>Afprøv din overskrift</strong> </p><input type="text" id="overskrift-field" placeholder="Skriv din overskrift her" onkeyup="previewOverskrift()">
+
+            <div class="margin-top-small">
+            <p><strong>Afprøv faktaboks indhold</strong> </p>
+                 <div id="summernote"></div>
+    <script>
+      $('#summernote').summernote({
+           toolbar: [
+            // [groupName, [list of button]]
+            ['style', ['bold', 'italic', 'clear']],
+                ['para', ['ul', 'ol']],
+          ],
+        placeholder: 'Afprøv faktaboks indhold',
+        tabsize: 2,
+        height: 200,
+        
+           callbacks: {
+                onChange: function(contents, $editable) {
+                    console.log('onChange:', contents, $editable);
+                    previewContent(contents);
+                }
+            }
+      });
+        
+           
+    </script>
+                
+     
+                
+                
+        </div>
+                  
+        <a class="nds-button nds-button--darkgray margin-top-small" onclick="createQuoteShortcodeToClipboard()">Kopier Faktaboks til udklipsholder</a>
+        <div class="margin-bottom-medium"></div>
+        <!-- <input class="clipboard__input" id="@font-serif" value="@font-serif"><a class="clipboard__icon" data-clipboard-target="#font-primary"><i class="fa fa-files-o" aria-hidden="true"></i></a> -->
+      </div>
+    </div>
+
+            
+            
+            
+            
+        <div class="row">
+          <div class="medium-12 columns">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+
+<table class="margin-bottom-medium nds-table-documentation nds-documentation-sections-table">
+  <tr>
+    <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small margin-top-small">Mobil visning (iPhone 5 format)</h3></td>
+  </tr>
+  <tr>
+
+    <td class="nds-grayDarkBackground" style="padding: 0; padding-top: 16px; padding-bottom: 16px">
+      <div style="width:320px; position:relative; display: block; height: auto;">
+          
+         <div class="factbox mobile">
+    <div class="factbox-content">
+        <h3 class="fact-title">Fakta</h3>
+        <div class="factbox-body collapse in" id="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" style="">
+            <div class="factbox-text"><ul><li>Dette er en listevisning</li><li>Dette er endnu en listevisning.</li></ul><br>Dette er normal tekst</div>
+        </div>
+        <a class="toggle-btn" role="button" data-toggle="collapse" href="#factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" aria-controls="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6">
+            Vis <span class="more-text">mere</span><span class="less-text">mindre</span> <span class="material-icons more-icon">expand_more</span><span class="material-icons less-icon">expand_less</span>
+        </a>
+    </div>
+</div> 
+          
+          
+          
+          
+          
+  <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
+</div>
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+      <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
+      <tr>
+        <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Desktop visning</h3></td>
+      </tr>
+      <tr>
+
+        <td class="nds-grayDarkBackground" style="padding: 0; padding-top: 16px; padding-bottom: 16px">
+          <div style="width:567px; position:relative; display: block; height: auto;">
+         
+              
+                      <div class="factbox">
+    <div class="factbox-content">
+        <h3 class="fact-title">Fakta</h3>
+        <div class="factbox-body collapse in" id="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" style="">
+            <div class="factbox-text"><ul><li>Dette er en listevisning</li><li>Dette er endnu en listevisning.</li></ul><br>Dette er normal tekst</div>
+        </div>
+        <a class="toggle-btn" role="button" data-toggle="collapse" href="#factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" aria-controls="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6">
+            Vis <span class="more-text">mere</span><span class="less-text">mindre</span> <span class="material-icons more-icon">expand_more</span><span class="material-icons less-icon">expand_less</span>
+        </a>
+    </div>
+</div> 
+              
+              
+      <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
+      </div>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
+
+          <tr>
+            <td><h3 class="nds-headline nds-headline-tertiary margin-bottom-small">Desktop visning - i en PLUS artikel</h3></td>
+          </tr>
+          <tr>
+
+            <td class="nds-grayDarkBackground" style="padding: 0; padding-top: 16px; padding-bottom: 16px">
+              <div style="width:624px; position:relative; display: block; height: auto;">
+              
+                  
+                      <div class="factbox">
+    <div class="factbox-content">
+        <h3 class="fact-title">Fakta</h3>
+        <div class="factbox-body collapse in" id="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" style="">
+            <div class="factbox-text"><ul><li>Dette er en listevisning</li><li>Dette er endnu en listevisning.</li></ul><br>Dette er normal tekst</div>
+        </div>
+        <a class="toggle-btn" role="button" data-toggle="collapse" href="#factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" aria-controls="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6">
+            Vis <span class="more-text">mere</span><span class="less-text">mindre</span> <span class="material-icons more-icon">expand_more</span><span class="material-icons less-icon">expand_less</span>
+        </a>
+    </div>
+</div> 
+                  
+                  
+          <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
+          </div>
+            </td>
+
+          </tr>
+          <tr>
+            <td>
+              <!-- <a class="nds-button nds-button--green">Primær knap</a> -->
+</table>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/nds-docs.js"></script>
+
+<script async src="https://use.fontawesome.com/3e2d91e305.js"></script>
+<script defer src="/js/app.min.js?v=04.21.18"></script>
+<script id="term-e7e5d07437489" src="https://vidassets.terminus.services/da786146-7013-46b7-bdb1-2b19e162289b/t.js"></script>
+<script defer type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+<script defer type="text/javascript" src="/js/google-adwords.js" charset="utf-8"></script>
+<noscript>
+<div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1023230933/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '411645502346404');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=411645502346404&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','nuvoe');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+<script type="text/javascript">
+    
+    
+
+function isEmpty(str){
+    return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+}
+
+function createQuoteShortcodeToClipboard() {
+  var quote = document.getElementById("citat-field").value;
+  var quoteBy = document.getElementById("citat-afsender").value;
+  var quoteByTitle = document.getElementById("citat-afsender-titel").value;
+
+  var result = "[citat|" + quote + "|" + quoteBy + ", |" + quoteByTitle + "]";
+
+  // Create a dummy input to copy the string array inside it
+  var dummy = document.createElement("input");
+
+  // Add it to the document
+  document.body.appendChild(dummy);
+
+  // Set its ID
+  dummy.setAttribute("id", "dummy_id");
+
+  // Output the array into it
+  document.getElementById("dummy_id").value=result;
+
+  // Select it
+  dummy.select();
+
+  // Copy its contents
+  document.execCommand("copy");
+
+  alert("Shortkode kopieret til udklipsholder: " + result);
+
+  // Remove it as its not needed anymore
+  document.body.removeChild(dummy);
+
+
+}
+    
+    /*
+// summernote.change
+$('#summernote').on('summernote.change', function(we, contents, $editable) {
+  console.log('summernote\'s content is changed.');
+    
+    var x = $('#summernote').summernote('code');
+    var headlines = document.getElementsByClassName("factbox-text");
+    console.log("Headline should be: " + x);
+    var i;
+    for (i = 0; i < headlines.length; i++) {
+        headlines[i].innerHTML = x;
+      }
+    
+    
+});
+*/
+
+function previewContent(content) {
+    var headlines = document.getElementsByClassName("factbox-text");
+    console.log("Content should be: " + content);
+    var i;
+    for (i = 0; i < headlines.length; i++) {
+        headlines[i].innerHTML = content;
+      }
+}
+
+function previewOverskrift() {
+    var x = document.getElementById("overskrift-field").value;
+    var headlines = document.getElementsByClassName("fact-title");
+    console.log("Headline should be: " + x);
+    var i;
+    for (i = 0; i < headlines.length; i++) {
+        headlines[i].innerHTML = x;
+      }
+}
+
+
+
+
+
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e8c29c0eae","applicationID":"51410798","transactionName":"NlUDZhADDBFUBRVfCw8fNEALTQsMUQMZGBQJQA==","queueTime":0,"applicationTime":7,"atts":"GhIAEFgZHx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

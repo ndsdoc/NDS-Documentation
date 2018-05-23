@@ -74,6 +74,11 @@ body {
   background-color: var(--color-grey-concrete);
 }
 
+.nds-grayDarkBackground {
+  background-color: var(--color-grey-dark);
+}
+
+
 /*Global*/
 
 .logo {
@@ -742,4 +747,9 @@ header .mobile {
   font-weight: var(--font-weight-sans-serif-regular);
   text-transform: none;
 
+}
+
+/*Text area*/
+textarea {
+    white-space: pre-wrap;
 }

@@ -1,0 +1,125 @@
+/*Fact-box.less*/
+@import "nds-variables.less";
+
+    .factbox {
+        background-color: @color-grey-concrete;
+        margin-bottom: @space-vertical-large;
+        padding: 0 @space-horizontal-x-large @space-vertical-large;
+        border-top: 4px solid @color-brand-red;
+        
+        &.mobile {
+            padding: 0 @space-horizontal-medium @space-vertical-large;
+        }
+
+        .factbox-content {
+            > h3 {
+                font-size: @font-size-x-small;
+                line-height: @font-line-hight-s;
+                letter-spacing: @font-letter-spacing-l;
+                font-weight: @font-weight-sans-serif-medium;
+                background-color: @color-brand-red;
+                color: @color-white;
+                float: left;
+                padding: @space-vertical-x-small @space-horizontal-small;
+                text-transform: uppercase !important;
+                display: inline-block;
+                white-space: pre-wrap;;
+                max-width: 100%;
+                overflow-x: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .factbox-body {
+                position: relative;
+                display: inline-block;
+                margin-top: @space-vertical-medium;
+                min-width: 100%;
+
+                .factbox-text {
+                    font-size: @font-size-small;
+                    line-height: @font-line-hight-l;
+                    letter-spacing: @font-letter-spacing-base;
+                    font-weight: @font-weight-sans-serif-regular;
+                    white-space: pre-wrap;
+                    
+                    > img {
+                        max-width: 100%;
+                    }
+                    > ul {
+                        margin-top: @space-vertical-small;
+                        margin-bottom: @space-vertical-small;
+                        display: inline-block;
+                    }
+                
+                }
+            }
+
+            .factbox-body.collapse[aria-expanded="false"] {
+                height: @font-line-hight-s * 3 !important;
+                overflow: hidden;
+            }
+
+            .factbox-body.collapsing[aria-expanded="false"] {
+                height: @font-line-hight-s * 3 !important;
+            }
+
+            .factbox-body:before {
+                -webkit-transition: all .8s ease-out;
+                -moz-transition: all .8s ease-out;
+                -ms-transition: all .8s ease-out;
+                -o-transition: all .8s ease-out;
+                transition: all .8s ease-out;
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 1;
+                background: -webkit-linear-gradient(rgba(255,255,255,0), @color-grey-concrete);
+                background: -o-linear-gradient(rgba(255,255,255,0), @color-grey-concrete);
+                background: -moz-linear-gradient(rgba(255,255,255,0), @color-grey-concrete);
+                background: linear-gradient(rgba(255,255,255,0), @color-grey-concrete);
+            }
+
+            .factbox-body.in:before {
+                opacity: 0;
+                transition: all 0.3s ease-in;
+            }
+
+            .factbox-body.in + a .more-icon, .factbox-body.in + a .more-text {
+                display: none;
+            }
+
+            .factbox-body:not(.in) + a .less-icon, .factbox-body:not(.in) + a .less-text {
+                display: none;
+            }
+
+            .toggle-btn {
+                color: @color-brand-red;
+                font-size: @font-size-small;
+                font-family: @font-sans-serif;
+                line-height: @font-line-hight-s;
+                font-weight: @font-weight-sans-serif-medium;
+                letter-spacing: @font-letter-spacing-s;
+                margin: @space-vertical-small 0;
+                display: inline-block;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                &:focus {
+                    text-decoration: none;
+                }
+
+                .more-icon, .less-icon {
+                    color: @color-brand-red;
+                    font-size: @font-size-large;
+                    position: relative;
+                    top: 5px;
+                    left: 5px;
+                }
+            }
+        }
+    }
