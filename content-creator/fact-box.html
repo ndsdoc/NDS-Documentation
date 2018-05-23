@@ -33,11 +33,17 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <script defer src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
 
   <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Roboto:400,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
      rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js">
+    <script src="../js/summernote-da-DK.js">    
+    </script>
 
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../nds.css">
@@ -207,7 +213,7 @@ piCId = '52395';
         <div class="row">
           <div class="medium-10 columns">
             <h1 class="nds-headline nds-headline-primary">Faktaboks</h1>
-            <h2 class="nds-headline nds-headline-secondary">En faktaboks anvendes til at indlejre indhold i en artikel der giver en merforklaring, definition eller oprids af historien. En faktaboks er som standard sammenfoldes og skal foldes ud for at vise indholdet. Feltet overskrift erstatter ordet FAKTA med en tekst i versaler. Brug kun en overskrift der beskriver hvad læseren kan forvente ved at folde faktaboksen ud.</h2>          </div>
+            <h2 class="nds-headline nds-headline-secondary">En faktaboks anvendes til at indlejre indhold i en artikel der giver en merforklaring, definition eller oprids af historien. En faktaboks er som standard sammenfoldes og skal foldes ud for at vise indholdet.<br/>Feltet overskrift erstatter ordet FAKTA med en tekst i versaler. Brug kun en overskrift der beskriver hvad læseren kan forvente ved at folde faktaboksen ud.<br/><br/>Når du er færdig med di faktaboks kan du trykke kopier og derefter indsætte indholdet som brødtekst i en faktaboks i NewsCycle. Husk at skrive din overskrift manuelt i NewsCycle.</h2>          </div>
             <div class="margin-top-small">
               <div class="medium-10 columns">
 
@@ -215,10 +221,13 @@ piCId = '52395';
             <p><strong>Afprøv din overskrift</strong> </p><input type="text" id="overskrift-field" placeholder="Skriv din overskrift her" onkeyup="previewOverskrift()">
 
             <div class="margin-top-small">
-            <p><strong>Afprøv faktaboks indhold</strong> </p><textarea name="textli" id="textField" placeholder="Skriv din faktaboks tekst her..."  cols="40" rows="5" onkeyup="previewContent()"></textarea>
+            <p><strong>Afprøv faktaboks indhold</strong> </p>
+                 <div id="summernote"></div>
+           
+                
         </div>
-        <a class="nds-button margin-right-small nds-button--green" onclick="previewEmbed()">Indsæt punkt</a>
-        <a class="nds-button nds-button--darkgray" onclick="createQuoteShortcodeToClipboard()">Kopier Faktaboks til udklipsholder</a>
+                  
+        <a class="nds-button nds-button--darkgray margin-top-small" onclick="createQuoteShortcodeToClipboard()">Kopier Faktaboks til udklipsholder</a>
         <div class="margin-bottom-medium"></div>
         <!-- <input class="clipboard__input" id="@font-serif" value="@font-serif"><a class="clipboard__icon" data-clipboard-target="#font-primary"><i class="fa fa-files-o" aria-hidden="true"></i></a> -->
       </div>
@@ -249,7 +258,7 @@ piCId = '52395';
     <div class="factbox-content">
         <h3 class="fact-title">Fakta</h3>
         <div class="factbox-body collapse in" id="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" style="">
-            <div class="factbox-text"><ul><li>Dette er en listevisning</li><li>Dette er endnu en listevisning.</li></ul>Dette er normal tekst</div>
+            <div class="factbox-text"><ul><li>Dette er en listevisning</li><li>Dette er endnu en listevisning.</li></ul><br>Dette er normal tekst</div>
         </div>
         <a class="toggle-btn" role="button" data-toggle="collapse" href="#factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" aria-controls="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6">
             Vis <span class="more-text">mere</span><span class="less-text">mindre</span> <span class="material-icons more-icon">expand_more</span><span class="material-icons less-icon">expand_less</span>
@@ -282,7 +291,7 @@ piCId = '52395';
     <div class="factbox-content">
         <h3 class="fact-title">Fakta</h3>
         <div class="factbox-body collapse in" id="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" style="">
-            <div class="factbox-text"><ul><li>Dette er en listevisning</li><li>Dette er endnu en listevisning.</li></ul>Dette er normal tekst</div>
+            <div class="factbox-text"><ul><li>Dette er en listevisning</li><li>Dette er endnu en listevisning.</li></ul><br>Dette er normal tekst</div>
         </div>
         <a class="toggle-btn" role="button" data-toggle="collapse" href="#factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" aria-controls="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6">
             Vis <span class="more-text">mere</span><span class="less-text">mindre</span> <span class="material-icons more-icon">expand_more</span><span class="material-icons less-icon">expand_less</span>
@@ -313,7 +322,7 @@ piCId = '52395';
     <div class="factbox-content">
         <h3 class="fact-title">Fakta</h3>
         <div class="factbox-body collapse in" id="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" style="">
-            <div class="factbox-text"><ul><li>Dette er en listevisning</li><li>Dette er endnu en listevisning.</li></ul>Dette er normal tekst</div>
+            <div class="factbox-text"><ul><li>Dette er en listevisning</li><li>Dette er endnu en listevisning.</li></ul><br>Dette er normal tekst</div>
         </div>
         <a class="toggle-btn" role="button" data-toggle="collapse" href="#factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6" aria-expanded="true" aria-controls="factbox-body-d69f5028-1198-4772-b767-5b684bb3c4a6">
             Vis <span class="more-text">mere</span><span class="less-text">mindre</span> <span class="material-icons more-icon">expand_more</span><span class="material-icons less-icon">expand_less</span>
@@ -342,11 +351,6 @@ piCId = '52395';
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 <script src="/js/clipboard.min.js"></script>
 <script src="/js/nds-docs.js"></script>
-
-<script>
-  setActiveState('buttons');
-  var clipboard = new Clipboard('.clipboard__icon');
-</script>
 
 <script async src="https://use.fontawesome.com/3e2d91e305.js"></script>
 <script defer src="/js/app.min.js?v=04.21.18"></script>
@@ -384,17 +388,15 @@ twq('track','PageView');
 <!-- End Twitter universal website tag code -->
 
 <script type="text/javascript">
+    
+    
 
 function isEmpty(str){
     return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
 }
 
 function createQuoteShortcodeToClipboard() {
-  var quote = document.getElementById("citat-field").value;
-  var quoteBy = document.getElementById("citat-afsender").value;
-  var quoteByTitle = document.getElementById("citat-afsender-titel").value;
-
-  var result = "[citat|" + quote + "|" + quoteBy + ", |" + quoteByTitle + "]";
+  var contentText = $('#summernote').summernote('code');
 
   // Create a dummy input to copy the string array inside it
   var dummy = document.createElement("input");
@@ -406,7 +408,7 @@ function createQuoteShortcodeToClipboard() {
   dummy.setAttribute("id", "dummy_id");
 
   // Output the array into it
-  document.getElementById("dummy_id").value=result;
+  document.getElementById("dummy_id").value=contentText;
 
   // Select it
   dummy.select();
@@ -414,21 +416,18 @@ function createQuoteShortcodeToClipboard() {
   // Copy its contents
   document.execCommand("copy");
 
-  alert("Shortkode kopieret til udklipsholder: " + result);
+  alert("Shortkode kopieret til udklipsholder: " + contentText);
 
   // Remove it as its not needed anymore
   document.body.removeChild(dummy);
-
-
 }
 
-function previewContent() {
-    var x = document.getElementById("textField").value;
+function previewContent(content) {
     var headlines = document.getElementsByClassName("factbox-text");
-    console.log("Headline should be: " + x);
+    console.log("Content should be: " + content);
     var i;
     for (i = 0; i < headlines.length; i++) {
-        headlines[i].innerHTML = x;
+        headlines[i].innerHTML = content;
       }
 }
 
@@ -446,6 +445,31 @@ function previewOverskrift() {
 
 
 
+</script>
+          
+<script>
+$(document).ready(function()  { 
+      $('#summernote').summernote({
+          lang: 'da-DK',
+           toolbar: [
+            // [groupName, [list of button]]
+            ['style', ['bold', 'italic', 'clear']],
+                ['para', ['ul', 'ol']],
+               ['misc', ['undo', 'redo', 'fullscreen']]
+          ],
+        placeholder: 'Afprøv faktaboks indhold',
+        tabsize: 2,
+        height: 200,
+        
+           callbacks: {
+                onChange: function(contents, $editable) {
+                    console.log('onChange:', contents, $editable);
+                    previewContent(contents);
+                }
+            },
+          
+      });
+    });
 </script>
 
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e8c29c0eae","applicationID":"51410798","transactionName":"NlUDZhADDBFUBRVfCw8fNEALTQsMUQMZGBQJQA==","queueTime":0,"applicationTime":7,"atts":"GhIAEFgZHx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
