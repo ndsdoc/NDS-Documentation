@@ -58,20 +58,23 @@
   margin-top: 1em;
   min-width: 100%;
 }
-.factbox .factbox-content .factbox-body .factbox-text {
-  font-size: 1em;
-  line-height: 1.45em;
-  letter-spacing: 0.04em;
-  font-weight: 400;
-  white-space: pre-wrap;
+.factbox .factbox-content .factbox-body .factbox-text > p {
+  font-size: 1em !important;
+  line-height: 1.45em !important;
+  letter-spacing: 0.04em !important;
+  font-weight: 400 !important;
+  white-space: pre-wrap !important;
 }
 .factbox .factbox-content .factbox-body .factbox-text > img {
   max-width: 100%;
 }
 .factbox .factbox-content .factbox-body .factbox-text > ul {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
   display: inline-block;
+}
+.factbox .factbox-content .factbox-body .factbox-text > a {
+  color: #375DC5 !important;
 }
 .factbox .factbox-content .factbox-body.collapse[aria-expanded="false"] {
   height: 3.75em !important;
@@ -86,7 +89,7 @@
   -ms-transition: all 0.8s ease-out;
   -o-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
-  content: '';
+  /*content: '';*/
   width: 100%;
   height: 100%;
   position: absolute;

@@ -40,10 +40,9 @@
      rel="stylesheet">
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-lite.js">
-    <script src="../js/summernote-da-DK.js">    
-    </script>
+    <link href="../content-creator/summernote/summernote-lite.css" rel="stylesheet">
+    <script src="../content-creator/summernote/summernote-lite.js"></script>
+    <script src="../content-creator/summernote/lang/summernote-da-DK.js">    </script>
 
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../nds.css">
@@ -455,7 +454,9 @@ $(document).ready(function()  {
             // [groupName, [list of button]]
             ['style', ['bold', 'italic', 'clear']],
                 ['para', ['ul', 'ol']],
-               ['misc', ['undo', 'redo', 'fullscreen']]
+               ['misc', ['undo', 'redo']],
+               ['insert', ['link']],
+               ['misc', ['fullscreen']]
           ],
         placeholder: 'Afprøv faktaboks indhold',
         tabsize: 2,
@@ -478,6 +479,9 @@ $(document).ready(function()  {
           
       });
     });
+    
+$('.note-editable').css('font-size','16px');
+    
 </script>
 
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e8c29c0eae","applicationID":"51410798","transactionName":"NlUDZhADDBFUBRVfCw8fNEALTQsMUQMZGBQJQA==","queueTime":0,"applicationTime":7,"atts":"GhIAEFgZHx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
