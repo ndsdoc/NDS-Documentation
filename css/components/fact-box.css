@@ -58,7 +58,7 @@
   margin-top: 1em;
   min-width: 100%;
 }
-.factbox .factbox-content .factbox-body .factbox-text {
+.factbox .factbox-content .factbox-body .factbox-text > p {
   font-size: 1em !important;
   line-height: 1.45em !important;
   letter-spacing: 0.04em !important;
