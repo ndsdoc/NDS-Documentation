@@ -38,12 +38,12 @@ body {
     --font-weight-serif-bold: 700;
 
     /*Padding & Spacing - Horizontal */
-    --space-horizontal-x-small: 0.25rem; /*4px*/
-    --space-horizontal-small: 0.5rem; /*8px*/
-    --space-horizontal-medium: 1rem; /*16px*/
-    --space-horizontal-large: 1.5rem; /*24px*/
-    --space-horizontal-x-large: 2rem; /*32px*/
-    --space-horizontal-xx-large: 3rem; /*64px*/
+    --space-horizontal-x-small: 0.25em; /*4px*/
+    --space-horizontal-small: 0.5em; /*8px*/
+    --space-horizontal-medium: 1em; /*16px*/
+    --space-horizontal-large: 1.5em; /*24px*/
+    --space-horizontal-x-large: 2em; /*32px*/
+    --space-horizontal-xx-large: 3em; /*64px*/
 
     /*Padding & Spacing - Vertical*/
     --space-vertical-x-small: 0.25em; /*4px*/
@@ -693,11 +693,15 @@ header .mobile {
 }
 
 
+/*Page simulation div */
+.page-padding {
+ padding-left: var(--space-horizontal-medium) !important;
+ padding-right: var(--space-horizontal-medium) !important;
+}
+
 /*CITAT*/
 /*Citat */
 .nds-quote {
-  padding-right: var(--space-horizontal-medium) !important;
-  padding-left: var(--space-horizontal-medium) !important;
   font-style: normal !important;
   position: relative;
   background-color: white;

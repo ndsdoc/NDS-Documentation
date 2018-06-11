@@ -42,7 +42,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link href="../content-creator/summernote/summernote-lite.css" rel="stylesheet">
     <script src="../content-creator/summernote/summernote-lite.js"></script>
-    <script src="../content-creator/summernote/lang/summernote-da-DK.js">    </script>
+    <script src="../content-creator/summernote/lang/summernote-da-DK.js"></script>
+    <script src="https://cdn.jsdelivr.net/store/2.5.1/store2.min.js"></script>
+    <script src="../content-creator/summernote/plugin/summernoteDrafts.js"></script>
+    
+    <script src='http://lovasoa.github.io/tidy-html5/tidy.js'></script>
 
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../nds.css">
@@ -157,6 +161,7 @@ piCId = '52395';
 <div class="nds-nav--drawer" id="nds-nav--drawer">
   <div class="nds-nav--side nds-nav--side--simple">
     <ul class="nds-nav--side__list">
+        <!--
       <li id="design-system" class="nds-nav--side__list__item"><a href="oversigt.html">Oversigt</a></li>
     </ul>
     <h3 class="nds-headline nds-headline-tertiary margin-bottom-x-small">Styling</h3>
@@ -167,6 +172,7 @@ piCId = '52395';
     <h3 class="nds-headline nds-headline-tertiary margin-bottom-x-small">Shortcode generator</h3>
       <li id="story-teaser" class="nds-nav--side__list__item"><a href="../story-teaser.html">Story Teasers</a></li>
       <li id="citat" class="nds-nav--side__list__item"><a href="quote.html">Citat</a></li>
+-->
       <!--
             <li id="utilities" class="nds-nav--side__list__item"><a href="/brand/design-system/utilities">Utilities</a></li>
           </ul>
@@ -393,9 +399,87 @@ twq('track','PageView');
 function isEmpty(str){
     return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
 }
+    
+
 
 function createQuoteShortcodeToClipboard() {
-  var contentText = $('#summernote').summernote('code');
+
+  var $contentText = $('#summernote').summernote('code');
+  
+  //console.log("Print the direct html - " + $('#summernote').summernote('code'));
+    
+    var output = $('#summernote').summernote('code');
+    
+    var $object = $($('#summernote').summernote('code'), {id: "myContent"});
+    //$object.attr("id", "myContent");
+    
+    $object.html(output);
+    
+    // Select all font elements with a size attribute, and
+    // remove the size attribute
+   // $object.removeAttr('style');
+    
+    console.log($("myContent").outerHTML());
+    var myOutput = $($object).outerHTML();
+
+    
+    console.log("My output html is: " + $($object).outerHTML());
+    
+    options = {
+      "indent":"auto",
+      "indent-spaces":2,
+      "wrap":80,
+      "markup":true,
+      "output-xml":false,
+      "numeric-entities":true,
+      "quote-marks":true,
+      "quote-nbsp":false,
+      "show-body-only":true,
+      "quote-ampersand":false,
+      "break-before-br":true,
+      "uppercase-tags":false,
+      "uppercase-attributes":false,
+      "drop-font-tags":true,
+      "tidy-mark":false
+    }
+
+    
+   // console.log(result);
+    
+    
+    //Test start
+    
+    /*mystr='<p><i>Hvordan fik du dit nuværende job?<br></i><span style=”font-size: 1rem;”>Jeg mødte en sød pige (Dorthe), der inspirerede mig til at forlade mit job som blomsterhandler. Jeg havde lyst til at starte noget nyt helt fra bunden af.&nbsp;</span></p><p><i style=”font-size: 1rem;”>Hvad er dine vigtigste opgaver?<br></i><span style=”font-size: 1rem;”>At hjælpe de pårørende videre og forsøge forstå deres behov.&nbsp;</span></p><p><i style=”font-size: 1rem;”>Hvilke egenskaber er vigtige at have i dit job?<br></i><span style=”font-size: 1rem;”>Empati og forståelse og være god til at lytte.&nbsp;</span></p><p><i style=”font-size: 1rem;”>Hvem har gavn, af det du laver?<br></i><span style=”font-size: 1rem;”>De pårørende. De afdøde har jo også, men sjælen har forladt kroppen, det er et tomt hylster. De pårørende, det er dem jeg holder i hånden.&nbsp;</span></p><p><i style=”font-size: 1rem;”>Hvad er din største bedrift på jobbet?<br></i><span style=”font-size: 1rem;”>Der var en ung mand der døde og efterlod tre små piger, det gjorde stort indtryk, fordi familien var fantastisk. De her piger var 4, 6 og 7 år, det gjorde stort indtryk, <i>Hvordan bedsteforældrene håndterede deres søns død.</span></p><p><span style=”font-size: 1rem;”><i>Hvad er din største bommert?</i><br></span><span style=”font-size: 1rem;”>Jeg er kommet til at køre en forkert vej til en kirke og glemte også en gang at tage urnen med. Afdøde har vi heldigvis aldrig fået forbyttet. Det er nærmest også umuligt. Der er mange tjekpunkter.&nbsp;</span></p><p><i></i><span style=”font-size: 1rem;”><i>Hvad er det bedste ved arbejdet?</i><br></span><span style=”font-size: 1rem;”>At ikke to dage er ens og når de pårørende fortæller, <i>Hvor meget vores arbejde har betydet for dem.&nbsp;</span></p><p><span style=”font-size: 1rem;”><i>Hvad er det værste ved arbejdet?<br></i></span><span style=”font-size: 1rem;”>Når vi lægger små børn i kister.&nbsp;</span></p><p><span style=”font-size: 1rem;”><i>Hvad overrasker andre, når du fortæller om dit job?<br></i></span><span style=”font-size: 1rem;”>Folk bliver helt stille, når man siger man er bedemand. Det rører noget i en. Måske har man lige mistet eller ens moster er død. Der er heller ikke mange bedemænd. Det er ikke som med frisører eller butiksassistenter. Folk har mange fordomme over for bedemænd.&nbsp;</span></p><p><span style=”font-size: 1rem;”><i>Hvordan ser fremtiden ud i din branche?<br></i></span><span style=”font-size: 1rem;”>Den ser god ud. Vi har en god forretning, mange pårørende viser os den tillid at vælge os. Det er ikke en branche, som er et modefag, behovet vil altid være der.&nbsp;</span></p><p><i></i><span style=”font-size: 1rem;”><i>Tror du, at du har dit nuværende job om fem år?</i><br></span><span style=”font-size: 1rem;”>Ja. Nu har jeg allerede skiftet job midtvejs i livet. Jeg er så glad for min kollega og mit arbejde. Jeg kunne ikke forestille mig at lave andet.&nbsp;</span></p><p><i></i><span style=”font-size: 1rem;”><i>Hvis du skulle have et andet job, hvad skulle det så være?</i><br></span><span style=”font-size: 1rem;”>Så skulle jeg arbejde med mennesker, måske pædagog eller sådan noget. Jeg vil gerne gøre en forskel.&nbsp;</span></p><p><i></i><span style=”font-size: 1rem;”><i>Hvad laver du, når du ikke er på arbejde?</i><br></span><span style=”font-size: 1rem;”>Jeg er sammen med familie, mine børn, barnebarn og veninder. Jeg er meget socialt anlagt. Jeg går også til loop træning og gåture i skoven.</span></p>';*/
+ 
+    
+    var res = myOutput.replace(/ style\=\"font-size\: 1rem\;\"/g, "");
+    
+    
+    console.log("Result = " + res);
+    
+    
+    var result = tidy_html5(res, options);
+    
+    
+   
+    /*
+    var endResult = $(testresult);
+    
+    var txt = '';
+    endResult.each(function () {
+    var element = $(this).get(0);
+
+    if (element.nodeType === Node.ELEMENT_NODE) {
+        txt += element.outerHTML;
+    }
+    else if (element.nodeType === Node.TEXT_NODE) {
+        txt += element.nodeValue;
+    }
+});
+*/
+    
+   //// console.log('Test string - ' + txt);
+   
 
   // Create a dummy input to copy the string array inside it
   var dummy = document.createElement("input");
@@ -407,7 +491,7 @@ function createQuoteShortcodeToClipboard() {
   dummy.setAttribute("id", "dummy_id");
 
   // Output the array into it
-  document.getElementById("dummy_id").value=contentText;
+  document.getElementById("dummy_id").value = result;
 
   // Select it
   dummy.select();
@@ -415,11 +499,19 @@ function createQuoteShortcodeToClipboard() {
   // Copy its contents
   document.execCommand("copy");
 
-  alert("Shortkode kopieret til udklipsholder: " + contentText);
+  alert("Shortkode kopieret til udklipsholder: " + result);
 
   // Remove it as its not needed anymore
   document.body.removeChild(dummy);
 }
+    
+       // jQuery extension to get an element's outer HTML
+    // http://stackoverflow.com/a/2419877/1156119
+jQuery.fn.outerHTML = function(s) {
+     return s
+          ? this.before(s).remove()
+          : jQuery("<p>").append(this.eq(0).clone()).html();
+};
 
 function previewContent(content) {
     var headlines = document.getElementsByClassName("factbox-text");
@@ -455,8 +547,9 @@ $(document).ready(function()  {
             ['style', ['bold', 'italic', 'clear']],
                 ['para', ['ul', 'ol']],
                ['misc', ['undo', 'redo']],
-               ['insert', ['link']],
-               ['misc', ['fullscreen']]
+               /*['insert', ['link']],*/
+               ['misc', ['fullscreen']]/*,
+                ['misc', ['sDraftsLoad', 'sDraftsSave']]*/
           ],
         placeholder: 'Afprøv faktaboks indhold',
         tabsize: 2,
@@ -474,13 +567,49 @@ $(document).ready(function()  {
             setTimeout( function(){
               document.execCommand( 'insertText', false, bufferText );
             }, 10 );
-          }
+          },
+
+    onInit: function(e) {
+        $("#summernote").summernote("code", localStorage.getItem("summernotedata"));
+    }
             },
           
       });
     });
     
-$('.note-editable').css('font-size','16px');
+    $('.note-editable').css('font-size','1em !important');
+/*
+    $.extend($.summernote.options, {
+      sDrafts: {
+        storePrefix: 'sFakta',
+        dateFormat: null,
+        saveIcon: null,
+        loadIcon: null
+      }
+    });
+
+    $.extend($.summernote.lang['da-DK'], {
+      sDrafts: {
+        save: 'Gem kladde',
+        load: 'Indlæs kladde',
+        select: 'Vælg den kladde du vil indlæse',
+        provideName: 'Skriv et navn til din kladde',
+        saved: 'Din kladde er gemt',
+        loaded: 'Din kladde er indlæst',
+        deleteAll: 'Slet alle kladder',
+        noDraft: 'Den valgte klade kunne ikke indlæses',
+        nosavedDrafts: 'Der er ikke gemt nogle kladder',
+        deleteDraft: 'Slet',
+        youSure: 'Er du sikker på du ønsker at gøre dette?'
+      }
+    });
+*/
+    
+ $(function() {      
+    setInterval(function(){
+        localStorage.setItem("summernotedata", $("#summernote").summernote("code"));
+    }, 5000); // every 5 second interval
+});
     
 </script>
 
