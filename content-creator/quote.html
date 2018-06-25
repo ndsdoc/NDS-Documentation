@@ -369,8 +369,26 @@ function createQuoteShortcodeToClipboard() {
   var quote = document.getElementById("citat-field").value;
   var quoteBy = document.getElementById("citat-afsender").value;
   var quoteByTitle = document.getElementById("citat-afsender-titel").value;
+  
+  var result = "";
+  //If the quote is empty
+  if (quote.length == 0) {
+      alert("Dit citat må ikke være tomt!");
+      return;
+  }
+  //If the quote is there but the "by" is empty
+  else if (quoteBy.length == 0) {
+      result = "[citat|" + quote + "]";
+  }
+  //If the quote and "by" is there but the "by title" is empty
+  else if (quoteByTitle.length == 0) {
+      result = "[citat|" + quote + "|" + quoteBy + "]";
+  }
+  //If all parameters are there
+  else {
+      result = "[citat|" + quote + "|" + quoteBy + ", |" + quoteByTitle + "]";  
+  }
 
-  var result = "[citat|" + quote + "|" + quoteBy + ", |" + quoteByTitle + "]";
 
   // Create a dummy input to copy the string array inside it
   var dummy = document.createElement("input");

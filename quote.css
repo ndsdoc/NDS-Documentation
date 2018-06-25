@@ -8,8 +8,8 @@
 /*18.4px*/
 /*16.96px*/
 /*16px*/
+/*14.4px*/
 /*12.8px*/
-/*10.4px*/
 /*20px*/
 /*Padding & Spacing - Horizontal */
 /*4px*/
@@ -32,6 +32,7 @@
   font-style: normal;
   position: relative;
   background-color: white;
+  font-family: 'Roboto', sans-serif;
 }
 .nds-quote-sign {
   position: absolute;
@@ -44,13 +45,13 @@
 }
 .nds-quote-container {
   background-color: white;
-  padding-left: 2rem;
+  padding-left: 2em;
   padding-top: 2em;
   padding-bottom: 2em;
 }
 .nds-blockquote {
   display: block;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   font-style: normal;
   letter-spacing: 0.04em;
   font-weight: 700;
@@ -58,7 +59,7 @@
   color: #1a1a1a;
 }
 .nds-quoteBy {
-  font-size: 0.8rem;
+  font-size: 0.9em;
   color: #474747;
   font-weight: 700;
   letter-spacing: 0.04em;

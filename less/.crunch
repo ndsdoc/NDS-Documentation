@@ -37,6 +37,25 @@
 			"sources": [
 				"nds-variables.less"
 			]
+		},
+		"quote.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../quote.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"nds-variables.less"
+			]
 		}
 	}
 }
